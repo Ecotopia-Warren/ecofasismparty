@@ -15,6 +15,7 @@ from xlsx_read import read
 from quest_ministries import ISSUER, RESISTANCE, TOGETHER, DELIVER, NOTES
 from chains import CHAINS, ROLES, NOTES as CHAIN_NOTES
 from quest_texts import TEXT
+from quest_rewards import REWARD
 
 NOTES = {**NOTES, **CHAIN_NOTES}
 
@@ -156,6 +157,9 @@ def card(qid, text, stamps):
         tag = f'<div class="chain">{c[1]} &middot; STEP {c[2]} OF {c[3]}</div>'
         if c[2] < c[3]:
             extra.append("Next step: at the gate.")
+        else:
+            tag = f'<div class="chain">{c[1]} &middot; FINALE</div>'
+            extra.append("Finisher named at the Grand Assembly.")
         if qid in ("H1", "H2", "H3", "H4", "S1", "S2"):
             extra.append("Captives may say no.")
     if extra:
@@ -234,7 +238,7 @@ def load(path):
     missing, extra = sorted(ids - TEXT.keys()), sorted(TEXT.keys() - ids)
     if missing or extra:
         print(f"WARNING quest_texts.py: no override for {missing}; override without xlsx row {extra}", file=sys.stderr)
-    return [(q, TEXT.get(q, t), st) for q, t, st in out]
+    return [(q, TEXT.get(q, t), REWARD.get(q, st)) for q, t, st in out]
 
 
 def render(paths):

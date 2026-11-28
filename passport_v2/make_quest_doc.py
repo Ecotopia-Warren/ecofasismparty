@@ -30,7 +30,8 @@ Regenerate: `python3 passport_v2/make_quest_cards.py`, then `cd passport_v2 && p
 
 ## Scoring
 
-- Every credit stamp is worth **100 CC**. A quest gives **1, 2 or 3 stamps** (3 = the really hard ones).
+- Every credit stamp is worth **100 CC**. A quest gives **1, 2 or 3 stamps**: 1 = easy (alone or with one or two people, a few minutes), 2 = real effort (find something hidden, strangers from several ministries, stealth), 3 = the really hard ones. Not generous on easy quests (decided 2026-11-28; overrides in `passport_v2/quest_rewards.py`).
+- **Chains pay off:** stamps escalate per step and the **FINALE** step pays **5 stamps**. Whoever completes a chain has their **reg. no. read out at the Grand Assembly** (the gate keeps a list of finale cards for the announcer). A full chain is worth 10-11 stamps, against 1 for an easy quest.
 - Stamps go in the credit boxes on passport pages 6 and 7. Final balance (page 8) = carbon debt + stamps x 100.
 - Every credit above 0 counts for your ministry. At the **Grand Assembly (23:30)** only the **top 3 ministries** may compete for **Ascension** (a privilege, not a right) with a song, a chant, a formation, or more.
 - Scoreboard at the gate (Chris makes it).

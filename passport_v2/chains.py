@@ -4,6 +4,7 @@ A ROLE card is handed out at the gate to a volunteer, who plays that character a
 Chain quests: only step 1 is handed out at the start. Hand in a step at the gate -> you get the next step.
 Each step is issued by a different ministry, so the ministries depend on each other.
 mode: W = witness, T = together (takes part), D = report (bring it/them to the ministry).
+Stamps escalate per step; the last step (FINALE) pays 5 and the finisher's reg. no. is read out at the Grand Assembly.
 """
 
 ROLES = [
@@ -22,26 +23,26 @@ CHAINS = [
     # id, chain, step, of, issuer, mode, text, stamps
     ("H1", "THE HACKER", 1, 4, "VIGILANCE", "D",
      "A hacker hides among us. Ask citizens \"Are you the hacker?\" until one confesses. "
-     "Done when you bring them to a Vigilance citizen.", "2"),
+     "Done when you bring them to a Vigilance citizen.", "1"),
     ("H2", "THE HACKER", 2, 4, "SERVICE", "T",
      "Escort the captured hacker to the Interrogation station. Ask THREE questions about the stolen file. Done after the third answer.", "2"),
     ("H3", "THE HACKER", 3, 4, "RADIANCE", "D",
-     "Bring the hacker to Carbon Confessions to be corrected. Done when they have confessed loudly, with a smile, to a Radiance citizen.", "2"),
+     "Bring the hacker to Carbon Confessions to be corrected. Done when they have confessed loudly, with a smile, to a Radiance citizen.", "3"),
     ("H4", "THE HACKER", 4, 4, "HUMUS", "W",
-     "Walk the corrected hacker to the recycling plant. Done when they have been renewed, with your witness watching.", "3"),
+     "Walk the corrected hacker to the recycling plant. Done when they have been renewed, with your witness watching.", "5"),
     ("D1", "THE DATA CENTRE", 1, 3, "HUMUS", "D",
      "Find a R.E.I.G.N. data centre and memorise its message. Done when you recite it word for word to a Humus citizen.", "2"),
     ("D2", "THE DATA CENTRE", 2, 3, "VIGILANCE", "T",
-     "Decode the data centre message together with a Vigilance citizen. Done when you agree on what R.E.I.G.N. is hiding.", "2"),
+     "Decode the data centre message together with a Vigilance citizen. Done when you agree on what R.E.I.G.N. is hiding.", "3"),
     ("D3", "THE DATA CENTRE", 3, 3, "SERVICE", "D",
-     "Turn the decoded message into a cheerful official announcement. Done when you deliver it to a Service citizen.", "3"),
+     "Turn the decoded message into a cheerful official announcement. Done when you deliver it to a Service citizen.", "5"),
     ("S1", "THE SMUGGLER", 1, 3, "LIGHT", "D",
      "A smuggler carries a forbidden item. Inspect citizens, with a yes, until you find it. "
      "Done when you bring the item and its owner to a Light citizen.", "2"),
     ("S2", "THE SMUGGLER", 2, 3, "HUMUS", "T",
-     "Take the confiscated item and its owner to the recycling plant. Done when the item is processed, with ceremony.", "2"),
+     "Take the confiscated item and its owner to the recycling plant. Done when the item is processed, with ceremony.", "3"),
     ("S3", "THE SMUGGLER", 3, 3, "JOY", "W",
-     "Return the processed item to the smuggler with a celebration. Done when 5 citizens join in.", "2"),
+     "Return the processed item to the smuggler with a celebration. Done when 5 citizens join in.", "5"),
 ]
 
 NOTES = {
@@ -49,7 +50,7 @@ NOTES = {
     "H1": "A hacker may deny it twice. The third time, they must confess.",
     "H2": "The Interrogation station stamps the hacker's passport. Questions only: no touching.",
     "H3": "Carbon Confessions is in the Kinderkamer.",
-    "H4": "The recycling plant is a station. Lost? Ask any official.",
+    "H4": "The recycling plant is a station.",
     "D1": "There are 7 data centres in the house: small boxes with a R.E.I.G.N. label.",
     "D2": "No right answer: agree on one meaning together and remember it.",
     "S1": "Ask before you inspect. Pockets and bags only if they say yes.",
