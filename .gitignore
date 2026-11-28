@@ -8,3 +8,12 @@
 .swarm/
 ruvector.db
 props/lie_detector/**/build/
+
+# Attendee personal data (real names / phone numbers) - local only, never in this public repo
+Citizens export and quests.xlsx
+*.xlsx
+passport_v2/out/passports.html
+passport_v2/out/passports.pdf
+passport_v2/out/passports_0*.pdf
+passport_v2/out/passports_test_*.pdf
+passport_v2/out/ministry_lists.*

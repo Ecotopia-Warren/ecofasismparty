@@ -44,18 +44,39 @@ Carbon declaration questions: meat on your plate (*"The Ministry of Purity recom
 
 "The machinery of care. Every citizen serves in one."
 
-| # | Ministry | Icon [SITE] | Mandate [DRAFT] | Night duty / game hook [DRAFT] |
-|---|---|---|---|---|
-| 1 | **Purity** | carrot | What enters the body. Pulse paste, clean plates, honest appetites. | Runs the ration counter and taste trials. |
-| 2 | **Radiance** | sun | Daylight, warmth and the glow of a contented face. Schedules rest (Article III). | Runs rest/sun-bathing schedule, the glow check. |
-| 3 | **Breath** | wind | Air: shared, measured, never wasted. Sighing is a form of emission. | Runs breath/whistle/candle challenges. |
-| 4 | **Flow** | water drop | Water and everything that flows: drinks, queues, conversation. Converts answers into water. | Runs the bar water-ledger and queue etiquette. |
-| 5 | **Light** | leaf | Living lightly: footprint, possessions, the gentle weight of a citizen. | Runs surrender/swap of belongings, footprint audit. |
-| 6 | **Industry** | bee | The hive. Every citizen's useful labour, joyfully pooled. | Runs work shifts and the hive production line. |
-| 7 | **Humus** | mushroom | Soil, decay and return. All things go back to nature (incl. records on 19 Dec). | Runs compost/sorting and "returning" spent credits. |
-| 8 | **Service** | cube | Order, packaging, logistics; every citizen in their box. Placement desk. | Runs inburgering desk and assignment. |
-| 9 | **Vigilance** | stag | Serves the Guardian. Keeps the list; receives every concern. | Runs concern box, observation, the list. |
-| 10 | **Joy** | mask | Mandatory celebration. The mask is always smiling. | Runs the dance floor ("dancing counts as renewable energy"), smile checks. |
+| # | Ministry | Icon [SITE] | Mandate [DRAFT] |
+|---|---|---|---|
+| 1 | **Purity** | carrot | What enters the body. Pulse paste, clean plates, honest appetites. |
+| 2 | **Radiance** | sun | Daylight, warmth and the glow of a contented face. Schedules rest (Article III). |
+| 3 | **Breath** | wind | Air: shared, measured, never wasted. Sighing is a form of emission. |
+| 4 | **Flow** | water drop | Water and everything that flows: drinks, queues, conversation. Converts answers into water. |
+| 5 | **Light** | leaf | Living lightly: footprint, possessions, the gentle weight of a citizen. |
+| 6 | **Industry** | bee | The hive. Every citizen's useful labour, joyfully pooled. |
+| 7 | **Humus** | mushroom | Soil, decay and return. All things go back to nature (incl. records on 19 Dec). |
+| 8 | **Service** | cube | Order, packaging, logistics; every citizen in their box. Placement desk. |
+| 9 | **Vigilance** | stag | Serves the Guardian. Keeps the list; receives every concern. |
+| 10 | **Joy** | mask | Mandatory celebration. The mask is always smiling. |
+
+## Teams [DESIGN DOC 2026-09-30 + SITE; DRAFT where marked]
+
+Two kinds of team. Do not mix them.
+
+### Guest teams: the ministries
+- **Placement** [SITE]: every citizen is assigned **one ministry and one quest** at intake. "You do not have to choose. That kindness has already been arranged." Guests may name companions; "R.E.I.G.N. hears every request, and decides."
+- **Size** [DRAFT]: ten ministries, ~20 citizens each at ~200 guests.
+- **Entry** [DESIGN]: a citizen first works off their starting carbon debt; once debt-free they start contributing to their ministry.
+- **Self-organising** [DESIGN]: each ministry has to work out who is in it, what it is about and what it is trying to achieve. Nobody hands them a leader or a plan.
+- **Competition** [DESIGN]: ministries compete to generate the most power as efficiently as possible while staying sustainable. One currency (carbon credits) moves the same number for individuals and ministries.
+- **The dilemma engine** [DESIGN]: winning pushes ministries into overusing resources or making inhumane calls, always framed positively. That tension is the point of ministry play.
+- **The gathering** [DESIGN]: ministries are told all night to be "as ready as possible". At the climax R.E.I.G.N.'s leader arrives and every ministry must show what it built (a song, a chant, a formation) as if for judgment. This crowd is what the resistance raids.
+- **Cross-cutting layer** [DESIGN]: ~10 personal quests seed the resistance. Rebels stay in their ministry; nobody can tell whose quest came from which pool.
+- **Ministries and stations**: crew runs the stations; ministries govern themselves. Ministries **visit** stations and can choose to **support** them (send citizens to help, take on a station's tasks as ministry work, earn credits for it). A station is **not** the head of any ministry: station crew has no authority over a ministry or its citizens, and a ministry decides for itself whether and how it helps.
+
+### Crew teams: who runs the night
+- Stations and experiences: see the Station plan below (owners per station).
+- Regime actors (police, interrogation, intercom voice, the leader's arrival) are crew playing R.E.I.G.N., not guests.
+- Practical shift teams [COORDINATION SHEET]: Build, Bar, Safety patrol, Medical on-call, Welcome/Processing, Sound cue crew, Photography, Strike, and everyone on toilet duty.
+- Leads [COORDINATION SHEET]: production Jack & Irena · propaganda/marketing Jack & Chris · story Chris · visual design Chris & Marina · economy/game design Jack, Chris & Wout · tech/sound Bart & Wout · government actors & costumes Kim · bar Hanna · volunteers Winona · finance Jack.
 
 ## Station plan [CREW, 2026-11-25]
 
