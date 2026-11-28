@@ -1,0 +1,79 @@
+---
+title: "The World of Ecotopia"
+subtitle: "One night in the last sustainable utopia"
+---
+
+<div class="scanlines"></div>
+
+<div class="ticker-wrap">
+  <span class="ticker">
+    ◆ LIVING GREEN, LIVING TOGETHER, LIVING FOR THE FUTURE ◆ THE GUARDIAN SEES EVERYTHING, AND FORGIVES MOST OF IT ◆ NOTHING OUTLIVES THE CELEBRATION ◆
+  </span>
+</div>
+
+<div class="propaganda" data-label="Welcome, citizen">
+Ecotopia is the last sustainable utopia. Everything here has been thought of, so that you no longer have to. Rest, work, food, friendship and the order in which they happen: it has all been arranged, with love.
+</div>
+
+---
+
+## R.E.I.G.N.
+
+The **Regime for Ecological Integrity and Global Nurturing** is the guiding hand of Ecotopia, *"so that no citizen ever has to wonder what comes next."*
+
+> **R.E.I.G.N. decides, so that citizens are free.**
+
+### How R.E.I.G.N. speaks (for crew)
+
+Soft, maternal, cozy-coercive. R.E.I.G.N. **never threatens**. It has always *already decided*, for your own good. It is never angry, only a little disappointed, and mostly proud of you.
+
+| Instead of… | R.E.I.G.N. says… |
+|---|---|
+| "No." | "That has already been taken care of." |
+| "You're under arrest." | "We've found you a quieter place to flourish." |
+| "Answer the question." | "Questions are welcome. They have already been answered." |
+| "We are watching you." | "The Guardian sees everything, and it forgives most of it." |
+| "Report to the office." | "Please keep your evenings free." |
+
+---
+
+## The Guardian
+
+A great **stag** watches over Ecotopia. *It sees everything, and it forgives most of it.* The Ministry of Vigilance serves the Guardian, keeps the list, and receives every concern.
+
+## The Governors
+
+The Governors read **every** concern a citizen raises. Every single one. Concerns are forwarded to the Ministry of Vigilance. *Please keep your evenings free.*
+
+## The ban on AI
+
+Artificial intelligence is **banned by decree of R.E.I.G.N.** Ecotopia was made entirely by devoted human hands. Citizens are asked, in the carbon declaration, how many questions they ask an AI per day. Every answer is paid for in water.
+
+## Carbon debt
+
+*"You were born owing the planet a little. Happily, R.E.I.G.N. accepts confessions."*
+
+Every citizen fills in a **carbon declaration** at intake and receives a **carbon debt** number. R.E.I.G.N. has done the conversion into water. See [Citizenship intake](attend.qmd).
+
+## The records
+
+Every citizen record is **released back to nature on 19 December 2026**, three weeks after the night. *Nothing outlives the celebration.*
+
+---
+
+## The Articles of Nurturing
+
+*Adopted unanimously. Every vote was counted, including yours.*
+
+1. Every citizen is placed where they will flourish. R.E.I.G.N. does the placing, so that you need not.
+2. Questions are welcome. They have already been answered.
+3. Rest is a right of every citizen. It is scheduled.
+4. R.E.I.G.N. hears every concern. Every single one.
+
+---
+
+<div style="text-align:center; margin: 2rem 0;">
+  <a href="manifesto.qmd" class="cta-btn">THE TEN MINISTRIES</a>
+  <a href="attend.qmd" class="cta-btn">CITIZENSHIP INTAKE</a>
+  <a href="slogans.qmd" class="cta-btn">SLOGANS & SONGS</a>
+</div>

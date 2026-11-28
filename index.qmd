@@ -1,0 +1,106 @@
+---
+title: ""
+format:
+  html:
+    page-layout: full
+---
+
+<div class="scanlines"></div>
+
+<div class="warning-box">
+<strong>Crew & print hub. Spoilers inside.</strong> This site is for organisers, makers and ministry crew of Ecotopia. Citizens should apply at <a href="https://join-ecotopia.org">join-ecotopia.org</a> and stop reading here. R.E.I.G.N. would prefer you be surprised. It has already arranged it.
+</div>
+
+<div class="ticker-wrap">
+  <span class="ticker">
+    ◆ LIVING GREEN, LIVING TOGETHER, LIVING FOR THE FUTURE ◆ R.E.I.G.N. DECIDES, SO THAT CITIZENS ARE FREE ◆ QUESTIONS ARE WELCOME. THEY HAVE ALREADY BEEN ANSWERED ◆ DANCING COUNTS AS RENEWABLE ENERGY ◆ ARTIFICIAL INTELLIGENCE IS BANNED BY DECREE ◆ SATURDAY 28 NOVEMBER ◆
+  </span>
+</div>
+
+<div class="hero">
+  <div class="hero-sub">The Regime for Ecological Integrity and Global Nurturing presents</div>
+  <div class="hero-title">ECOTOPIA</div>
+  <div style="font-family: 'Special Elite', monospace; color: #4aad4a; letter-spacing: 0.3em; font-size: 0.95rem; margin: 0.5rem 0;">— ONE NIGHT IN THE LAST SUSTAINABLE UTOPIA —</div>
+  <div class="seal">🦌</div>
+  <div class="hero-decree">
+    Living green, living together, living for the future.<br>
+    Saturday 28 November · 21:00 – 04:00 · Location disclosed to processed citizens
+  </div>
+</div>
+
+---
+
+## 📦 GET EVERYTHING WE'VE MADE
+
+<style>
+.dl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0 2.5rem; }
+.dl-card { background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem 1.1rem; border-radius: 4px; }
+.dl-card h4 { color: #c8a000; margin: 0 0 0.6rem; letter-spacing: 0.1em; }
+.dl-wide { margin-bottom: 2.5rem; }
+.dl-row { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; padding: 0.4rem 0; border-bottom: 1px dotted #1a5c1a; color: #cfe8cf; }
+.dl-row > span:last-child { display: flex; flex-wrap: wrap; gap: 0.3rem; justify-content: flex-end; }
+.chip { font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; padding: 0.15rem 0.45rem; border: 1px solid #2d7a2d; border-radius: 3px; color: #6fd66f !important; text-decoration: none; white-space: nowrap; }
+.chip:hover { background: #2d7a2d; color: #fff !important; }
+.poster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); column-gap: 1.5rem; }
+.dl-all { display: inline-block; margin: 0.5rem 0.5rem 0 0; padding: 0.6rem 1.1rem; background: #1a5c1a; color: #fff !important; border-radius: 4px; text-decoration: none; letter-spacing: 0.1em; }
+</style>
+
+<div class="warning-box">
+<strong>Being rewritten.</strong> Some printables below still use the old ministry names. They are being brought in line with the canon (issues #6–#10). Check before you print.
+</div>
+
+<a class="dl-all" href="downloads.html">ALL FILES →</a>
+<a class="dl-all" href="https://github.com/Ecotopia-Warren/ecofasismparty/archive/refs/heads/main.zip">DOWNLOAD EVERYTHING (ZIP)</a>
+
+{{< include _products.qmd >}}
+
+---
+
+## THE WORLD IN ONE BREATH
+
+**Ecotopia** is the last sustainable utopia, and it is very, very cozy. It is run by **R.E.I.G.N.**, the *Regime for Ecological Integrity and Global Nurturing*: the guiding hand, "so that no citizen ever has to wonder what comes next."
+
+<div class="propaganda" data-label="The voice of R.E.I.G.N.">
+
+R.E.I.G.N. never threatens. It has simply already decided, for your own good. *"Questions are welcome. They have already been answered."*
+
+</div>
+
+* **The Guardian**: a great stag watches over Ecotopia. *"It sees everything, and it forgives most of it."*
+* **AI is banned** by decree of R.E.I.G.N. (The citizen site insists it was made entirely by devoted human hands.)
+* **The Governors** read every concern. Concerns are forwarded to the Ministry of Vigilance. *Please keep your evenings free.*
+* **Carbon debt**: you were born owing the planet a little. Happily, R.E.I.G.N. accepts confessions.
+* **Records**: every citizen record is released back to nature on 19 December. *Nothing outlives the celebration.*
+
+[Read the full world →](lore.qmd){.cta-btn}
+
+---
+
+## THE TEN MINISTRIES
+
+*The machinery of care. Every citizen serves in one.* You do not have to choose. That kindness has already been arranged.
+
+{{< include _ministries.qmd >}}
+
+[The Articles of Nurturing →](manifesto.qmd){.cta-btn} [Slogans & songs →](slogans.qmd){.cta-btn}
+
+---
+
+## THE NIGHT
+
+* **Saturday 28 November, 21:00 to 04:00.** Arrive 20:30 to 21:00 for your **inburgering**.
+* Every citizen is assigned **one ministry and one quest**.
+* Until around midnight it is a game and a party at once: ministries, missions and a little intrigue. After that, it is just a party.
+* One donation covers everything inside. *Places are given, not taken.*
+* Not applied? You are processed at the door: a longer wait, and further obligations.
+
+<div class="warning-box">
+<strong>Safety & satire notice:</strong> Ecotopia is an immersive theatrical party and satire, 18+. Guests can step out of the game at any time. Crew: anyone saying <strong>"OZONE"</strong> pauses roleplay immediately; drop character and help.
+</div>
+
+---
+
+<div style="text-align:center; color: #2d7a2d; font-size: 0.75rem; letter-spacing: 0.2em; margin-top: 2rem;">
+REGIME FOR ECOLOGICAL INTEGRITY AND GLOBAL NURTURING (R.E.I.G.N.)<br>
+R.E.I.G.N. decides, so that citizens are free.
+</div>

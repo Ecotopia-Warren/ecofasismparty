@@ -1,0 +1,10 @@
+/.quarto/
+**/*.quarto_ipynb
+.Rhistory
+
+
+# AI tool state (private)
+.claude-flow/
+.swarm/
+ruvector.db
+props/lie_detector/**/build/

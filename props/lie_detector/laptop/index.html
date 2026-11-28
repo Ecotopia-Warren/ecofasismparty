@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Truth-Harmony Verifier</title>
+<style>
+  :root{
+    --paper:#efe6cc; --paper2:#f7f1dc; --ink:#1f3a26; --dim:#5d7a63; --green:#2f6b3a; --leaf:#7ee08a;
+    --amber:#f2c14e; --red:#b3261e; --line:#b9ad86; --screen:#0f2316; --grid:#24402c;
+  }
+  *{box-sizing:border-box;cursor:none!important;user-select:none;-webkit-user-select:none}
+  html,body{margin:0;height:100%;background:var(--paper);color:var(--ink);overflow:hidden;
+    font-family:"Courier New",ui-monospace,monospace}
+  .wrap{height:100%;display:grid;grid-template-rows:auto 1fr auto;padding:2.2vh 3vw;gap:2vh}
+  header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:.45vh double var(--green);padding-bottom:1.2vh}
+  .brand{font-size:2.3vh;letter-spacing:.28em;color:var(--dim);text-transform:uppercase}
+  .brand b{color:var(--green);letter-spacing:.18em}
+  .clock{font-size:2vh;color:var(--dim)}
+  main{display:grid;grid-template-columns:1.2fr 1fr;gap:3vw;min-height:0}
+  .panel{background:var(--paper2);border:.4vh solid var(--green);border-radius:1.2vh;padding:2.5vh 2vw;position:relative;min-height:0;min-width:0}
+  .scope{background:var(--screen);padding:0;overflow:hidden}
+  #wave{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .dial{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.8vh}
+  .label{font-size:2vh;letter-spacing:.3em;color:var(--dim);text-transform:uppercase}
+  .bar{width:100%;height:4vh;border:.3vh solid var(--green);border-radius:.8vh;overflow:hidden;background:#e5dcc0}
+  .bar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,#4fae5c,var(--amber),var(--red));transition:width .12s linear}
+  .readout{font-size:7vh;font-weight:bold;letter-spacing:.08em;color:var(--green)}
+  .status{font-size:3vh;text-align:center;line-height:1.35;min-height:9vh;font-family:Georgia,"Times New Roman",serif;font-style:italic}
+  footer{font-size:2vh;color:var(--dim);text-align:center;letter-spacing:.12em;font-family:Georgia,"Times New Roman",serif;font-style:italic}
+  .stag{width:12vh;height:12vh;color:var(--green)}
+  .stag svg{width:100%;height:100%;display:block}
+  .verdict{position:fixed;inset:0;display:none;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:5vw;gap:3vh;z-index:5;color:#f7f1dc}
+  .verdict.show{display:flex}
+  .verdict .stag{color:#f7f1dc;width:16vh;height:16vh}
+  .verdict h1{font-size:11vh;margin:0;letter-spacing:.05em;font-family:"Courier New",monospace}
+  .verdict p{font-size:4vh;margin:0;max-width:80vw;line-height:1.35;font-family:Georgia,"Times New Roman",serif;font-style:italic}
+  .verdict small{font-size:2vh;letter-spacing:.3em;opacity:.7;text-transform:uppercase}
+  .v-true{background:radial-gradient(circle at 50% 40%,#2c7a3d,#17441f)}
+  .v-lie{background:#7a120d;animation:flash .5s steps(1) infinite}
+  .v-unk{background:radial-gradient(circle at 50% 40%,#a8801f,#6b500f)}
+  @keyframes flash{50%{background:#3f0705}}
+  /* operator tell: 4px dots bottom-left, only meaningful if you know */
+  #tell,#mic{position:fixed;bottom:6px;width:4px;height:4px;border-radius:50%;z-index:9}
+  #tell{left:6px}#mic{left:14px;background:transparent}
+  #help{position:fixed;right:2vw;bottom:2vh;background:#111d;border:1px solid #555;padding:1.5vh 1.2vw;font-size:1.8vh;line-height:1.6;display:none;z-index:10;color:#ddd;white-space:pre}
+  #help.show{display:block}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="stag" viewBox="0 0 100 100">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <g id="antler">
+          <path d="M41,47 C31,38 29,24 25,8"/>
+          <path d="M34,35 L21,31"/><path d="M30,25 L17,19"/><path d="M27,15 L22,5"/><path d="M39,44 L28,45"/>
+        </g>
+        <use href="#antler" transform="translate(100,0) scale(-1,1)"/>
+      </g>
+      <g fill="currentColor">
+        <path d="M37,52 L50,90 L63,52 Q50,43 37,52Z"/>
+        <path d="M36,50 L20,44 L34,60Z"/><path d="M64,50 L80,44 L66,60Z"/>
+      </g>
+      <circle cx="43.5" cy="57" r="1.8" fill="#efe6cc"/><circle cx="56.5" cy="57" r="1.8" fill="#efe6cc"/>
+    </symbol>
+  </defs>
+</svg>
+<div class="wrap">
+  <header>
+    <div class="brand">Ministry of Vigilance · <b>Truth-Harmony Verifier</b></div>
+    <div class="clock" id="clock"></div>
+  </header>
+  <main>
+    <section class="panel scope"><canvas id="wave"></canvas></section>
+    <section class="panel dial">
+      <div class="stag" aria-hidden="true"><svg><use href="#stag"/></svg></div>
+      <div class="label">Harmony index</div>
+      <div class="readout" id="readout">--.-</div>
+      <div class="bar"><i id="bar"></i></div>
+      <div class="status" id="status"></div>
+    </section>
+  </main>
+  <footer id="foot"></footer>
+</div>
+
+<div class="verdict" id="verdict"><div class="stag" aria-hidden="true"><svg><use href="#stag"/></svg></div><h1 id="vh"></h1><p id="vp"></p><small>R.E.I.G.N. · The Guardian sees everything, and forgives most of it</small></div>
+<div id="tell"></div><div id="mic"></div>
+<div id="help">OPERATOR (hidden)
+1 = next verdict HARMONIOUS
+2 = next verdict DISHARMONY DETECTED
+3 = next verdict INCONCLUSIVE
+0 = random verdict
+ENTER / SPACE = start reading (9 s); on verdict screen: back to idle
++ = suspicious spike during reading
+BACKSPACE / . / - / ESC = abort, back to idle
+F = fullscreen · M = mic on/off · H = this help
+Tell dot (bottom-left): green / red / amber = armed, dim = random
+Mic dot: green = listening, red = denied</div>
+
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const wave = $('wave'), ctx = wave.getContext('2d');
+  const READ_MS = 9000, VERDICT_AUTO_RESET_MS = 45000;
+
+  const VERDICTS = {
+    truth: {cls:'v-true', h:'HARMONIOUS', tell:'#2f9a45', lines:[
+      'Your answer matches what R.E.I.G.N. had already written down.',
+      'Truth recorded. Your footprint has been lightened by 2 credits.',
+      'The Guardian nods. Please continue to be this honest.',
+      'Harmony confirmed. You may return to your joy.',
+      'Lovely. R.E.I.G.N. is so proud of you, and was never in doubt.'
+    ]},
+    lie: {cls:'v-lie', h:'DISHARMONY DETECTED', tell:'#c0392b', lines:[
+      'Your answer has been forwarded to the Ministry of Vigilance. Please keep your evening free.',
+      'A small untruth. R.E.I.G.N. forgives it. Your debt does not.',
+      'The Guardian saw that. Report to your minister with a smile.',
+      'Disharmony logged. Breathe out slowly: sighing is a form of emission.',
+      'R.E.I.G.N. is not angry. R.E.I.G.N. is disappointed, warmly.'
+    ]},
+    unk: {cls:'v-unk', h:'INCONCLUSIVE', tell:'#d9a21b', lines:[
+      'The Guardian requires a second confession.',
+      'Your heart is ambiguous. Ambiguity is a form of waste. Again, please.',
+      'Reading unclear. Place your hands flatter and think greener thoughts.',
+      'The Guardian is patient. The Guardian has all night.'
+    ]}
+  };
+  const STATUS_SCAN = [
+    'Calibrating to your carbon signature…','Measuring micro-hesitation…','Comparing with your carbon declaration…',
+    'Consulting the Guardian…','Reading your pledge back to you…','Converting your answer into water…'
+  ];
+  const IDLE = 'Place both hands flat on the table.<br>The Guardian is listening.';
+  const FOOTS = ['Questions are welcome. They have already been answered.','R.E.I.G.N. hears every concern. Every single one.',
+    'Rest is a right of every citizen. It is scheduled.','R.E.I.G.N. decides, so that citizens are free.'];
+  const lastLine = {};
+  let armed = null, state = 'idle', t0 = 0, audio = null, master = null, analyser = null, micOn = false, micStream = null, micData = null;
+  let spikeUntil = 0, autoTimer = 0, footIdx = 0, lastBeat = 0, statusIdx = -1, lastFootSwap = 0;
+  const history = new Array(400).fill(0);
+  let dpr = 1;
+
+  // ---------- audio out (created on first key press: autoplay policy) ----------
+  function ac(){
+    try{
+      if(!audio){
+        const C = window.AudioContext || window.webkitAudioContext; if(!C) return null;
+        audio = new C(); master = audio.createGain(); master.gain.value = 0.9;
+        const comp = audio.createDynamicsCompressor(); master.connect(comp); comp.connect(audio.destination);
+      }
+      if(audio.state === 'suspended') audio.resume();
+      return audio;
+    }catch(e){ return null; }
+  }
+  function tone(freq, dur, type, vol, when){
+    const a = ac(); if(!a) return;
+    const o = a.createOscillator(), g = a.createGain(), s = a.currentTime + (when || 0);
+    o.type = type || 'sine'; o.frequency.value = freq;
+    o.connect(g); g.connect(master);
+    g.gain.setValueAtTime(0.0001, s); g.gain.linearRampToValueAtTime(vol, s + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, s + dur);
+    o.start(s); o.stop(s + dur + 0.05);
+  }
+  const heartbeat = () => { tone(70,0.18,'sine',0.4); tone(62,0.2,'sine',0.3,0.22); };
+  const chime = () => [523,659,784,1047].forEach((f,i)=>tone(f,0.9,'triangle',0.2,i*0.16));
+  const siren = () => { for(let i=0;i<6;i++){ tone(880,0.28,'square',0.1,i*0.55); tone(620,0.28,'square',0.1,i*0.55+0.27); } };
+  const hmm = () => { tone(330,0.5,'sawtooth',0.08); tone(311,0.6,'sawtooth',0.08,0.45); };
+
+  // ---------- mic (optional; makes the traces react to the speaker) ----------
+  function micDot(c){ $('mic').style.background = c; }
+  async function toggleMic(){
+    if(micOn){
+      micOn = false; micDot('transparent');
+      if(micStream){ micStream.getTracks().forEach(t => t.stop()); micStream = null; }
+      return;
+    }
+    try{
+      const a = ac(); if(!a || !navigator.mediaDevices) throw new Error('no audio');
+      micStream = await navigator.mediaDevices.getUserMedia({audio:true});
+      analyser = a.createAnalyser(); analyser.fftSize = 512; micData = new Uint8Array(analyser.fftSize);
+      a.createMediaStreamSource(micStream).connect(analyser); micOn = true; micDot('#2f9a45');
+    }catch(e){ micOn = false; micDot('#c0392b'); }
+  }
+  function micLevel(){
+    if(!micOn || !analyser) return 0;
+    analyser.getByteTimeDomainData(micData);
+    let m = 0; for(const v of micData) m = Math.max(m, Math.abs(v - 128));
+    return m / 128;
+  }
+
+  // ---------- drawing ----------
+  function resize(){
+    dpr = window.devicePixelRatio || 1;
+    const r = wave.getBoundingClientRect();
+    wave.width = Math.max(1, Math.round(r.width * dpr)); wave.height = Math.max(1, Math.round(r.height * dpr));
+  }
+  window.addEventListener('resize', resize);
+  if(window.ResizeObserver) new ResizeObserver(resize).observe(wave.parentElement);
+  resize();
+  function draw(level){
+    history.push(level); history.shift();
+    const w = wave.width, h = wave.height; ctx.clearRect(0,0,w,h);
+    ctx.strokeStyle = '#24402c'; ctx.lineWidth = dpr;
+    for(let y=1;y<6;y++){ ctx.beginPath(); ctx.moveTo(0,h*y/6); ctx.lineTo(w,h*y/6); ctx.stroke(); }
+    for(let x=1;x<10;x++){ ctx.beginPath(); ctx.moveTo(w*x/10,0); ctx.lineTo(w*x/10,h); ctx.stroke(); }
+    const lanes = [['#7ee08a',0.25,1.0],['#f2c14e',0.55,0.6],['#9fd3ff',0.82,0.35]];
+    const now = performance.now();
+    lanes.forEach(([col,base,amp],li)=>{
+      ctx.strokeStyle = col; ctx.lineWidth = 2.2*dpr; ctx.beginPath();
+      history.forEach((v,i)=>{
+        const x = w*i/(history.length-1);
+        const n = Math.sin(i*0.18+li*2+now/300)*0.04 + (Math.random()-0.5)*0.02;
+        const y = h*base - (v*amp*0.22 + n)*h;
+        if(i) ctx.lineTo(x,y); else ctx.moveTo(x,y);
+      }); ctx.stroke();
+    });
+    ctx.fillStyle = '#8fb596'; ctx.font = `${Math.max(10, h*0.032)}px "Courier New", monospace`;
+    ctx.fillText('GALVANIC', 10*dpr, h*0.25-h*0.11);
+    ctx.fillText('CARDIAC GUILT', 10*dpr, h*0.55-h*0.11);
+    ctx.fillText('CARBON RESONANCE', 10*dpr, h*0.82-h*0.09);
+  }
+
+  // ---------- loop ----------
+  function loop(now){
+    let level;
+    if(state === 'scan'){
+      const el = (now - t0) / 1000;
+      const spike = now < spikeUntil ? 0.55 : 0;
+      level = Math.min(1, 0.25 + 0.25*Math.sin(el*1.7) + Math.random()*0.25 + spike + micLevel()*1.6);
+      const idx = 35 + 50*Math.abs(Math.sin(el*0.9)) + Math.random()*12 + (spike ? 10 : 0);
+      $('readout').textContent = Math.min(99.9, idx).toFixed(1); $('bar').style.width = Math.min(100, idx) + '%';
+      if(now - lastBeat > 900 - 300*(el/9)){ heartbeat(); lastBeat = now; }
+      const si = Math.min(STATUS_SCAN.length-1, Math.floor(el/1.5));
+      if(si !== statusIdx){ statusIdx = si; $('status').textContent = STATUS_SCAN[si]; }
+      if(now - t0 > READ_MS) finish();
+    } else {
+      level = 0.06 + micLevel()*0.8 + Math.random()*0.03;
+      if(state === 'idle' && now - lastFootSwap > 12000){ lastFootSwap = now; $('foot').textContent = FOOTS[footIdx++ % FOOTS.length]; }
+    }
+    draw(level);
+    requestAnimationFrame(loop);
+  }
+
+  function start(){
+    if(state !== 'idle') return;
+    ac(); state = 'scan'; t0 = performance.now(); statusIdx = -1; lastBeat = 0;
+    $('foot').textContent = 'Reading in progress. Do not move. Do not sigh.';
+    setTell();
+  }
+  function pick(){ if(armed) return armed; const r = Math.random(); return r < 0.45 ? 'truth' : (r < 0.85 ? 'lie' : 'unk'); }
+  function pickLine(key){
+    const L = VERDICTS[key].lines; let i;
+    do { i = Math.floor(Math.random()*L.length); } while(L.length > 1 && i === lastLine[key]);
+    lastLine[key] = i; return L[i];
+  }
+  function finish(){
+    state = 'verdict'; const key = pick(), v = VERDICTS[key];
+    $('verdict').className = 'verdict show ' + v.cls; $('vh').textContent = v.h; $('vp').textContent = pickLine(key);
+    ({truth:chime, lie:siren, unk:hmm})[key]();
+    $('readout').textContent = key==='truth' ? '98.7' : (key==='lie' ? '12.3' : '50.0');
+    $('bar').style.width = key==='truth' ? '98%' : (key==='lie' ? '12%' : '50%');
+    clearTimeout(autoTimer); autoTimer = setTimeout(() => { if(state === 'verdict') reset(); }, VERDICT_AUTO_RESET_MS);
+    armed = null; setTell();
+  }
+  function reset(){
+    clearTimeout(autoTimer);
+    state = 'idle'; armed = null; setTell();
+    $('verdict').className = 'verdict'; $('status').innerHTML = IDLE; $('readout').textContent = '--.-'; $('bar').style.width = '0';
+    $('foot').textContent = FOOTS[0]; footIdx = 1; lastFootSwap = performance.now();
+  }
+  function arm(k){ armed = k; setTell(); }
+  function setTell(){ $('tell').style.background = armed ? VERDICTS[armed].tell : '#8a8466'; $('tell').style.opacity = armed ? 1 : 0.35; }
+
+  // ---------- keys: by physical code, so numpad works with NumLock on or off ----------
+  const FALLBACK = {'1':'Digit1','2':'Digit2','3':'Digit3','0':'Digit0',' ':'Space','Enter':'Enter','Escape':'Escape','Backspace':'Backspace','+':'NumpadAdd'};
+  const ACT = {
+    truth:['Numpad1','Digit1','KeyT'], lie:['Numpad2','Digit2','KeyL'], unk:['Numpad3','Digit3','KeyU'],
+    rand:['Numpad0','Digit0'], go:['NumpadEnter','Enter','Space'],
+    abort:['Escape','Backspace','NumpadDecimal','NumpadSubtract'], spike:['NumpadAdd']
+  };
+  const action = code => Object.keys(ACT).find(a => ACT[a].includes(code));
+  function toggleFullscreen(){
+    try{ if(document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen(); }catch(e){}
+  }
+  async function wake(){ try{ if(navigator.wakeLock) await navigator.wakeLock.request('screen'); }catch(e){} }
+  let woke = false;
+  addEventListener('keydown', e => {
+    if(e.ctrlKey || e.metaKey || e.altKey || /^F\d+$/.test(e.key)) return;   // leave browser shortcuts (F11, F12, Ctrl+R) alone
+    e.preventDefault();                                                       // also kills Firefox quick-find on numpad / and '
+    ac(); if(!woke){ woke = true; wake(); }                                   // first key of any kind unlocks audio
+    if(e.repeat) return;
+    const code = e.code || FALLBACK[e.key] || '';
+    const a = action(code);
+    if(a === 'truth' || a === 'lie' || a === 'unk') arm(a);
+    else if(a === 'rand'){ armed = null; setTell(); }
+    else if(a === 'go'){ if(state === 'verdict') reset(); else start(); }
+    else if(a === 'abort') reset();
+    else if(a === 'spike'){ if(state === 'scan') spikeUntil = performance.now() + 900; }
+    else if(code === 'KeyF') toggleFullscreen();
+    else if(code === 'KeyM') toggleMic();
+    else if(code === 'KeyH') $('help').classList.toggle('show');
+  });
+  addEventListener('contextmenu', e => e.preventDefault());
+  addEventListener('pointerdown', () => ac());
+  setInterval(() => { const d = new Date(); $('clock').textContent = d.toLocaleTimeString('en-GB') + ' · CITIZEN SESSION ' + String(d.getMinutes()*61 + d.getSeconds()).padStart(4,'0'); }, 500);
+
+  reset();
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>

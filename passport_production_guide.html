@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>passport production guide</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+@page { size: A4; background: #f4efe2; margin: 18mm 16mm 20mm; @bottom-center { content: "ECOTOPIA · R.E.I.G.N. · " counter(page); font: 8pt sans-serif; color: #4a6a4a; } }
+html { background: #f4efe2; }
+body { max-width: 46rem; margin: 2rem auto; padding: 0 1rem; font: 10.5pt/1.55 Georgia, "Times New Roman", serif; color: #1c241c; background: #f4efe2; }
+header#title-block-header { border-bottom: 3px double #1a5c1a; margin-bottom: 1.5rem; padding-bottom: .8rem; }
+h1.title { font-size: 22pt; letter-spacing: .06em; text-transform: uppercase; color: #0f2e0f; margin: 0; }
+p.subtitle { font-style: italic; color: #4a6a4a; margin: .3rem 0; }
+p.author, p.date { font-size: 9pt; color: #4a6a4a; margin: .1rem 0; }
+h1, h2, h3, h4 { font-family: "Helvetica Neue", Arial, sans-serif; color: #0f2e0f; page-break-after: avoid; }
+h1 { font-size: 16pt; border-bottom: 1px solid #1a5c1a; padding-bottom: .2rem; margin-top: 1.8rem; }
+h2 { font-size: 13pt; color: #1a5c1a; margin-top: 1.4rem; }
+h3 { font-size: 11pt; color: #7a5a00; }
+nav#TOC { border: 1px solid #c9bfa3; background: #ece5d2; padding: .6rem 1rem; margin-bottom: 1.5rem; font-size: 9.5pt; page-break-after: always; }
+nav#TOC ul { padding-left: 1.1rem; margin: .2rem 0; }
+a { color: #1a5c1a; text-decoration: none; }
+table { border-collapse: collapse; width: 100%; font-size: 9pt; margin: .8rem 0; page-break-inside: auto; }
+th, td { border: 1px solid #c9bfa3; padding: .3rem .45rem; vertical-align: top; text-align: left; }
+th { background: #1a5c1a; color: #f4efe2; }
+tr { page-break-inside: avoid; }
+blockquote { border-left: 3px solid #1a5c1a; margin: .8rem 0; padding: .2rem .9rem; color: #2e3a2e; background: #ece5d2; }
+code { font-size: 9pt; background: #ece5d2; padding: 0 .2rem; }
+pre { background: #ece5d2; padding: .6rem; overflow-x: auto; font-size: 8.5pt; white-space: pre-wrap; }
+.warning-box { border: 2px solid #8b1a1a; background: #f6e6e0; padding: .6rem .9rem; margin: 1rem 0; }
+img { max-width: 100%; }
+.callout { border: 1px solid #c9bfa3; border-left: 4px solid #1a5c1a; background: #ece5d2; padding: .5rem .9rem; margin: 1rem 0; page-break-inside: avoid; }
+.callout > p:first-child > strong:only-child { display: block; font-family: "Helvetica Neue", Arial, sans-serif; color: #0f2e0f; text-transform: uppercase; letter-spacing: .04em; font-size: 9.5pt; }
+.callout-important, .callout-warning, .callout-caution { border-left-color: #8b1a1a; background: #f6e6e0; }
+.callout-tip { border-left-color: #7a5a00; }
+@media print { body { margin: 0; max-width: none; } }
+</style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#ecotopia-citizen-passport-documentation-booklet-production-guide" id="toc-ecotopia-citizen-passport-documentation-booklet-production-guide">Ecotopia:
+Citizen Passport &amp; Documentation Booklet Production Guide</a>
+<ul>
+<li><a href="#the-5-a6-passport-booklets-suite" id="toc-the-5-a6-passport-booklets-suite">1. The 5 A6 Passport Booklets
+Suite</a></li>
+<li><a href="#specifications-materials" id="toc-specifications-materials">2. Specifications &amp;
+Materials</a></li>
+<li><a href="#printing-instructions-all-booklets" id="toc-printing-instructions-all-booklets">3. Printing Instructions
+(All Booklets)</a></li>
+<li><a href="#fabrication-8-page-booklets-1-a4-sheet" id="toc-fabrication-8-page-booklets-1-a4-sheet">4. Fabrication: 8-Page
+Booklets (1 A4 Sheet)</a></li>
+<li><a href="#fabrication-16-page-booklets-2-a4-sheets" id="toc-fabrication-16-page-booklets-2-a4-sheets">5. Fabrication:
+16-Page Booklets (2 A4 Sheets)</a></li>
+<li><a href="#live-party-gameplay-guide-for-passports" id="toc-live-party-gameplay-guide-for-passports">6. Live Party Gameplay
+Guide for Passports</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="ecotopia-citizen-passport-documentation-booklet-production-guide">Ecotopia:
+Citizen Passport &amp; Documentation Booklet Production Guide</h1>
+<p><strong>A6 Passport Booklet Suite (Standard A4 Print, Cut &amp; Fold
+Imposition Specifications)</strong><br />
+<em>Authors: Wout (Technical &amp; Game Design Lead), Chris (Narrative
+&amp; Design Lead), Jack (Production Coordinator)</em><br />
+<em>Date: 2026-10-14</em></p>
+<blockquote>
+<p><strong>Fabrication Purpose:</strong><br />
+This guide details how to print, cut, fold, and bind the entire suite of
+<strong>5 physical A6 Passport Booklets</strong> for Sanctuary De Warren
+on November 28, 2026.<br />
+Using standard double-sided A4 duplex printing: - <strong>8-Page
+Booklets:</strong> 1 printed A4 sheet = 1 complete 8-page A6 booklet. -
+<strong>16-Page Booklets:</strong> 2 printed A4 sheets = 1 complete
+16-page A6 booklet.</p>
+</blockquote>
+<hr />
+<h2 id="the-5-a6-passport-booklets-suite">1. The 5 A6 Passport Booklets
+Suite</h2>
+<blockquote>
+<p><strong>A6 print booklets are being rebuilt.</strong> The five
+booklet files will be linked here once they are published again. The
+planned suite is listed below.</p>
+</blockquote>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 19%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th style="text-align: left;">Booklet Title</th>
+<th style="text-align: center;">Pages</th>
+<th style="text-align: center;">Sheets</th>
+<th style="text-align: left;">Key In-Universe / Clinical Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;"><strong>Citizen Passport</strong></td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1 A4 Duplex</td>
+<td style="text-align: left;">Guest ID, debt ledger, shift stamps, 10
+concessions audit, tear-out bond</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;"><strong>Broadcast Scripts &amp;
+Liturgy</strong></td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1 A4 Duplex</td>
+<td style="text-align: left;">Hanna PA decrees, Matriarch speech,
+Resistance manifesto, martyr relics</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;"><strong>Lore &amp; Narrative
+Bible</strong></td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">2 A4 Duplex</td>
+<td style="text-align: left;">4 epochs, Doublethink lexicon, sacred
+hagiography, 10 ministries, cellar secret</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;"><strong>Game Design &amp;
+Economics</strong></td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">2 A4 Duplex</td>
+<td style="text-align: left;">Concession loop, debt absorption formula,
+Netrunner/Secret Hitler engine</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td style="text-align: left;"><strong>Quest Cards &amp;
+Facilitator</strong></td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">2 A4 Duplex</td>
+<td style="text-align: left;">Minister clipboard powers, 10 seeded
+moles, 5 Netrunner runs, climax script</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Each rebuilt booklet will include both <strong>🖨️ A4
+Imposition Print View</strong> (for physical fabrication) and <strong>📖
+Sequential Reading View</strong> (for screen reading).</em></p>
+<hr />
+<h2 id="specifications-materials">2. Specifications &amp; Materials</h2>
+<ul>
+<li><strong>Final Booklet Dimensions:</strong> <strong>A6
+Portrait</strong> (105 mm wide × 148.5 mm tall) — standard international
+passport size.</li>
+<li><strong>Paper Stock Recommendation:</strong>
+<ul>
+<li><strong>Best:</strong> Heavy 120–160 gsm cream, ivory, or kraft
+paper. (Holds rubber stamp ink without bleeding through).</li>
+<li><strong>Standard:</strong> 80–100 gsm standard paper works fine if
+using quick-drying pigment ink pads.</li>
+</ul></li>
+<li><strong>Print Ratio &amp; Quantities for 200 Guests:</strong>
+<ul>
+<li><strong>Citizen Passports:</strong> 220 A4 sheets (200 guests + 20
+spares).</li>
+<li><strong>Facilitator &amp; Minister Documentation Packs:</strong>
+10–20 copies of Booklets 2, 3, 4, and 5 for Hosts, Ministers, Audio
+Engineers, and Actors.</li>
+</ul></li>
+<li><strong>Tools Required:</strong>
+<ol type="1">
+<li>Paper Guillotine / Rotary Trimmer (or scissors/ruler + hobby
+knife).</li>
+<li>Standard Long-Reach Stapler (or saddle-stitch booklet stapler).</li>
+<li>Perforation Cutter Wheel (optional, for scoring Page 7 of the
+Citizen Passport).</li>
+</ol></li>
+</ul>
+<hr />
+<h2 id="printing-instructions-all-booklets">3. Printing Instructions
+(All Booklets)</h2>
+<ol type="1">
+<li>Open any of the booklet HTML files in Chrome, Firefox, Safari, or
+Edge.</li>
+<li>Press <strong>Ctrl + P</strong> (Windows/Linux) or <strong>Cmd +
+P</strong> (Mac) to open the print dialog.</li>
+<li>Configure these exact settings:
+<ul>
+<li><strong>Destination:</strong> Your printer (or <em>Save as
+PDF</em>).</li>
+<li><strong>Paper Size:</strong> <code>A4</code></li>
+<li><strong>Layout:</strong> <code>Portrait</code></li>
+<li><strong>Two-Sided (Duplex):</strong> <strong>ON</strong>, set to
+<strong>Flip on Short Edge</strong> (or tumble).</li>
+<li><strong>Margins:</strong> <code>None</code> (or
+<code>Minimum</code>).</li>
+<li><strong>Options:</strong> Check <strong>“Background
+graphics”</strong> so all dark covers and frames print cleanly.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="fabrication-8-page-booklets-1-a4-sheet">4. Fabrication: 8-Page
+Booklets (1 A4 Sheet)</h2>
+<p><em>Applies to: Booklet 1 (Citizen Passport) &amp; Booklet 2
+(Broadcast Scripts)</em></p>
+<pre><code>Step 1: The A4 Sheet           Step 2: The Cut               Step 3: Nest &amp; Fold
+┌──────────────────────┐       ┌──────────────────────┐      ┌──────────┐
+│   Sheet 1 (A5)       │       │   Sheet 1 (A5)       │      │ Page 1   │
+│ [Page 8]  [Page 1]   │       │ [Page 8]  [Page 1]   │      │ (Cover)  │
+├──────────────────────┤  ──►  └──────────────────────┘ ──► ├──────────┤
+│   Sheet 2 (A5)       │       ┌──────────────────────┐      │ Staple   │
+│ [Page 6]  [Page 3]   │       │   Sheet 2 (A5)       │      │  Spine   │
+└──────────────────────┘       │ [Page 6]  [Page 3]   │      └──────────┘
+ (Side A of printed A4)        └──────────────────────┘
+                                (Stacked &amp; Folded)</code></pre>
+<ol type="1">
+<li><strong>The Cut (1 Cut):</strong> Cut straight across the middle
+dashed line at <strong>148.5 mm</strong> to create two A5 halves:
+<ul>
+<li><strong>Sheet 1 (Top half):</strong> Pages 8 &amp; 1 on Side A;
+Pages 2 &amp; 7 on Side B.</li>
+<li><strong>Sheet 2 (Bottom half):</strong> Pages 6 &amp; 3 on Side A;
+Pages 4 &amp; 5 on Side B.</li>
+</ul></li>
+<li><strong>Nesting:</strong> Lay Sheet 1 face down (Pages 2 &amp; 7
+facing up). Place Sheet 2 on top of it (Pages 4 &amp; 5 facing up).</li>
+<li><strong>Folding &amp; Binding:</strong> Fold in half along the
+vertical spine line (105 mm). Drive 2 staples through the spine.
+<ul>
+<li>Page order: <strong>1 (Cover)</strong> → <strong>2 &amp; 3</strong>
+→ <strong>4 &amp; 5 (Centerfold)</strong> → <strong>6 &amp; 7</strong> →
+<strong>8 (Back Cover)</strong>.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="fabrication-16-page-booklets-2-a4-sheets">5. Fabrication:
+16-Page Booklets (2 A4 Sheets)</h2>
+<p><em>Applies to: Booklet 3 (Lore Bible), Booklet 4 (Game Design),
+Booklet 5 (Quest Cards)</em></p>
+<ol type="1">
+<li><strong>Print 2 Sheets Duplex:</strong> Print Paper 1 and Paper 2
+with Duplex set to <strong>Flip on Short Edge</strong>.</li>
+<li><strong>Cut Both Sheets in Half at 148.5 mm:</strong> Produces 4
+separate A5 folded leaves:
+<ul>
+<li><strong>Leaf 1 (Paper 1 Top):</strong> Front: Pages 16 &amp; 1 |
+Back: Pages 2 &amp; 15</li>
+<li><strong>Leaf 2 (Paper 1 Bottom):</strong> Front: Pages 14 &amp; 3 |
+Back: Pages 4 &amp; 13</li>
+<li><strong>Leaf 3 (Paper 2 Top):</strong> Front: Pages 12 &amp; 5 |
+Back: Pages 6 &amp; 11</li>
+<li><strong>Leaf 4 (Paper 2 Bottom):</strong> Front: Pages 10 &amp; 7 |
+Back: Pages 8 &amp; 9 (Centerfold)</li>
+</ul></li>
+<li><strong>Nesting Stack:</strong>
+<ul>
+<li>Place <strong>Leaf 1</strong> on the table (Pages 2 &amp; 15 facing
+up).</li>
+<li>Place <strong>Leaf 2</strong> on top (Pages 4 &amp; 13 facing
+up).</li>
+<li>Place <strong>Leaf 3</strong> on top (Pages 6 &amp; 11 facing
+up).</li>
+<li>Place <strong>Leaf 4</strong> on top (Pages 8 &amp; 9 facing up —
+this is the centerfold spread).</li>
+</ul></li>
+<li><strong>Centerfold Stapling:</strong> Fold the nested stack in half
+at 105 mm and drive 2 staples through the spine.
+<ul>
+<li>Page order: <strong>1 to 16 in exact, flawless sequential numerical
+order!</strong></li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="live-party-gameplay-guide-for-passports">6. Live Party Gameplay
+Guide for Passports</h2>
+<ol type="1">
+<li><strong>Intake (Garage):</strong> Citizen arrives unassigned.
+Auditor stamps Starting Debt (<code>-150</code> to <code>-500 CC</code>)
+in the Page 2 box.</li>
+<li><strong>Ministry Recruitment:</strong> Minister signs citizen,
+stamps Page 3 with their Ministry Rubber Stamp, and logs absorbed debt
+onto Ministry Clipboard.</li>
+<li><strong>Shift &amp; Game Logging:</strong> Facilitators stamp boxes
+on Page 4 (<code>+25 CC</code> or <code>+50 CC</code>). Each stamp
+directly advances 1 or 2 blocks on the Page 5 Visual Carbon Ladder (no
+manual math needed during the party).</li>
+<li><strong>Tiers &amp; VIP Speakeasy Clearance:</strong> Crossing
+<code>0 CC</code> unlocks Assembly speaking/voting rights and audit
+immunity. Reaching <code>+100 CC</code> unlocks the secret VIP Library
+Speakeasy; the Bar Warden stamps the official gold/black seal on Page 5
+and pours Single Malt Scotch.</li>
+<li><strong>The 00:05 Climax:</strong> When Thijs reveals the cellar AI
+server, all citizens tear out Page 7 and throw it as confetti.</li>
+</ol>
+</body>
+</html>

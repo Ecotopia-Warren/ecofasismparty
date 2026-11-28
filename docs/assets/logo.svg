@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Stag emblem">
+  <g fill="none" stroke="#1a5c1a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="64" cy="64" r="58"/>
+    <!-- antlers -->
+    <path d="M52 52 L40 36 L34 20 M40 36 L26 34 M46 44 L32 48"/>
+    <path d="M76 52 L88 36 L94 20 M88 36 L102 34 M82 44 L96 48"/>
+  </g>
+  <g fill="#1a5c1a">
+    <!-- head -->
+    <path d="M50 50 Q64 44 78 50 L74 74 Q70 88 64 98 Q58 88 54 74 Z"/>
+    <!-- ears -->
+    <path d="M48 52 L38 56 L48 62 Z"/>
+    <path d="M80 52 L90 56 L80 62 Z"/>
+  </g>
+  <circle cx="57" cy="64" r="2.2" fill="#0a140a"/>
+  <circle cx="71" cy="64" r="2.2" fill="#0a140a"/>
+</svg>

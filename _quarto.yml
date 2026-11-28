@@ -1,0 +1,82 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "index.qmd"
+    - "lore.qmd"
+    - "manifesto.qmd"
+    - "attend.qmd"
+    - "slogans.qmd"
+    - "quest_cards_and_facilitator_pack.qmd"
+    - "broadcast_scripts_and_liturgy.qmd"
+    - "lore_and_narrative_bible.qmd"
+    - "game_design_and_activities.qmd"
+    - "downloads.qmd"
+  resources:
+    - "cheat_card_ch4.html"
+    - "passport_v2/passport_v2.pdf"
+    - "passport_v2/passport_v2.html"
+    - "passport_v2/great_seal_bw.svg"
+    - "game_design_and_activities.pdf"
+    - "lore_and_narrative_bible.pdf"
+    - "quest_cards_and_facilitator_pack.pdf"
+    - "broadcast_scripts_and_liturgy.pdf"
+    - "passport_production_guide.pdf"
+    - "passport_production_guide.html"
+    - "BITLAIR_PROP_FABRICATION_GUIDE.pdf"
+    - "BITLAIR_PROP_FABRICATION_GUIDE.html"
+    - "images/**"
+    - "stamps/*.svg"
+    - "stamps/png/*"
+    - "stamps/insignia/*.svg"
+    - "posters/posters/*.pdf"
+    - "posters/lasercutter/*.svg"
+
+website:
+  title: "ECOTOPIA"
+  description: "Crew & print hub for Ecotopia: one night in the last sustainable utopia. Spoilers."
+  favicon: "assets/favicon.ico"
+  navbar:
+    background: "#0a140a"
+    foreground: "#4aad4a"
+    logo: "assets/logo.svg"
+    title: "ECOTOPIA"
+    left:
+      - text: "HOME"
+        href: index.qmd
+      - text: "THE WORLD"
+        href: lore.qmd
+      - text: "10 MINISTRIES"
+        href: manifesto.qmd
+      - text: "SLOGANS & SONGS"
+        href: slogans.qmd
+      - text: "DOWNLOADS"
+        href: downloads.qmd
+      - text: "INTAKE"
+        href: attend.qmd
+      - text: "QUESTS & PACK"
+        href: quest_cards_and_facilitator_pack.qmd
+      - text: "AUDIO & SCRIPTS"
+        href: broadcast_scripts_and_liturgy.qmd
+      - text: "LORE BIBLE"
+        href: lore_and_narrative_bible.qmd
+      - text: "GAME DESIGN"
+        href: game_design_and_activities.qmd
+  page-footer:
+    background: "#0a140a"
+    foreground: "#2d7a2d"
+    center: |
+      "R.E.I.G.N. decides, so that citizens are free." · Crew & print hub, spoilers inside
+  open-graph:
+    title: "ECOTOPIA: ONE NIGHT IN THE LAST SUSTAINABLE UTOPIA"
+    description: "Living green, living together, living for the future."
+
+format:
+  html:
+    theme: [darkly, styles.css]
+    toc: false
+    mainfont: "Special Elite, monospace"
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&family=UnifrakturMaguntia&display=swap" rel="stylesheet">

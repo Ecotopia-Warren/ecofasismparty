@@ -1,0 +1,98 @@
+---
+title: "Citizenship Intake & The Carbon Declaration"
+subtitle: "You were born owing the planet a little. Happily, R.E.I.G.N. accepts confessions."
+---
+
+<div class="scanlines"></div>
+
+<div class="ticker-wrap">
+  <span class="ticker">
+    ◆ PLACES ARE GIVEN, NOT TAKEN ◆ ALL ORIGINS ARE WELCOME, EVENTUALLY ◆ EVERY ANSWER IS PAID FOR IN WATER ◆ R.E.I.G.N. HAS DONE THE CONVERSION ◆
+  </span>
+</div>
+
+## How citizens are processed
+
+1. **Apply online** at [join-ecotopia.org](https://join-ecotopia.org) and sign in.
+2. Fill in the **intake** (below) and the **carbon declaration**.
+3. Receive a **carbon debt** number.
+4. Be assigned **one ministry and one quest**. *You do not have to choose. That kindness has already been arranged.*
+5. On the night, arrive **20:30 to 21:00** for your **inburgering** at the garage entrance, where you receive your passport.
+
+Not applied? *Processed at the door: a longer wait, and further obligations.*
+
+### The intake fields
+
+| Field | R.E.I.G.N. notes |
+|---|---|
+| Full name | |
+| Phone | |
+| Country of origin | *All origins are welcome, eventually.* |
+| Occupation in the old world | *R.E.I.G.N. will find a better use for it.* |
+| What you would surrender first, for the good of all | |
+| A one-sentence pledge | |
+| Companions you'd like to serve alongside (names only) | *R.E.I.G.N. hears every request, and decides.* |
+| How you were recruited / who recruited you | |
+
+---
+
+## Practise the carbon declaration
+
+*Crew rehearsal version. Every answer is paid for in water. R.E.I.G.N. has done the conversion.*
+
+<div style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0;">
+<form id="decl">
+<div id="qs"></div>
+<button type="button" onclick="declare()" style="background: #1a5c1a; color: #fff; border: 1px solid #4aad4a; padding: 0.75rem 1.5rem; font-family: 'Special Elite', monospace; font-size: 1rem; cursor: pointer; letter-spacing: 0.1em; width: 100%;">CONFESS</button>
+</form>
+</div>
+
+<div id="result" style="display:none;" class="permit-card">
+  <div class="permit-header" style="color:#6dde6d;">R.E.I.G.N. · CARBON DECLARATION RECEIVED</div>
+  <div class="permit-field"><span class="label">Carbon debt</span><span class="value" id="r-debt" style="color:#ff6666;"></span></div>
+  <div class="permit-field"><span class="label">Converted to water</span><span class="value" id="r-water" style="color:#8ad0ff;"></span></div>
+  <div class="permit-field"><span class="label">Assigned ministry</span><span class="value" id="r-min" style="color:#c8a000;"></span></div>
+  <div style="margin-top:1rem;font-size:0.85rem;color:#8cb88c;font-style:italic;" id="r-note"></div>
+</div>
+
+<script>
+const Q = [
+ ["Meat on your plate", "The Ministry of Purity recommends pulse paste.", [["Never. I am pulse paste.",0],["Now and then",15],["Most days",40],["I am, frankly, a carnivore",70]]],
+ ["Flights last year", "", [["None",0],["One or two",30],["Three to five",60],["I live at the airport",110]]],
+ ["Your relationship with the combustion engine", "", [["We have never met",0],["We are acquainted",20],["It's complicated",45],["I am, spiritually, a car",90]]],
+ ["Screens and gadgets", "It is listening now.", [["One, reluctantly",5],["A few",20],["Many",45],["I glow in the dark",80]]],
+ ["Lithium you keep close", "", [["None on my person",0],["A phone",10],["Phone, watch, earbuds",30],["I rattle",60]]],
+ ["Houseplants you let die", "", [["None. They thrive.",0],["One. We don't talk about it.",10],["Several",30],["I am a known threat to ferns",55]]],
+ ["Questions asked to AI per day", "AI is banned by decree. This is a hypothetical.", [["None, ever",0],["One or two",25],["Dozens",60],["It is filling this in for me",120]]],
+ ["Times you said you are \"basically vegan\"", "", [["Never",0],["Once",10],["Regularly",30],["I am saying it right now",50]]],
+];
+const MIN = ["Purity","Radiance","Breath","Flow","Light","Industry","Humus","Service","Vigilance","Joy"];
+const qs = document.getElementById('qs');
+Q.forEach((q,i)=>{
+  const opts = q[2].map(o=>`<option value="${o[1]}">${o[0]}</option>`).join('');
+  qs.insertAdjacentHTML('beforeend', `<div style="margin-bottom:1.1rem;"><label style="color:#6dde6d;font-weight:bold;display:block;margin-bottom:0.2rem;">${i+1}. ${q[0]}</label>${q[1]?`<p style="font-size:0.8rem;color:#8cb88c;margin:0 0 0.3rem;font-style:italic;">${q[1]}</p>`:''}<select id="q${i}" style="width:100%;padding:0.5rem;background:#050d05;color:#a0cca0;border:1px solid #2d7a2d;font-family:monospace;">${opts}</select></div>`);
+});
+function declare(){
+  let d = 100;
+  Q.forEach((q,i)=> d += parseInt(document.getElementById('q'+i).value));
+  const litres = d * 37;
+  document.getElementById('r-debt').innerText = `${d} units`;
+  document.getElementById('r-water').innerText = `${litres.toLocaleString('nl-NL')} litres`;
+  document.getElementById('r-min').innerText = `Ministry of ${MIN[d % 10]}`;
+  document.getElementById('r-note').innerText = d < 160
+    ? "R.E.I.G.N. is proud of you. It was always going to be."
+    : "Thank you for your honesty. Your confession has been forwarded to the Ministry of Vigilance. Please keep your evenings free.";
+  const r = document.getElementById('result'); r.style.display='block'; r.scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+<p style="font-size:0.75rem;color:#5a8a5a;">Rehearsal only: the real declaration and the real ministry assignment happen on join-ecotopia.org. The base debt of 100 and the water rate are crew placeholders.</p>
+
+---
+
+## Safety
+
+* Ecotopia is an immersive theatrical party and satire, 18+.
+* Guests can **step out of the game at any time**.
+* Crew: anyone saying **"OZONE"** pauses roleplay immediately. Drop character and help.
+* Until around midnight it is a game and a party at once. After that, it is just a party.

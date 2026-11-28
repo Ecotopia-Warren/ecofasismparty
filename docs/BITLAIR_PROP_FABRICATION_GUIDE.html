@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>BITLAIR PROP FABRICATION GUIDE</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">
+@page { size: A4; background: #f4efe2; margin: 18mm 16mm 20mm; @bottom-center { content: "ECOTOPIA · R.E.I.G.N. · " counter(page); font: 8pt sans-serif; color: #4a6a4a; } }
+html { background: #f4efe2; }
+body { max-width: 46rem; margin: 2rem auto; padding: 0 1rem; font: 10.5pt/1.55 Georgia, "Times New Roman", serif; color: #1c241c; background: #f4efe2; }
+header#title-block-header { border-bottom: 3px double #1a5c1a; margin-bottom: 1.5rem; padding-bottom: .8rem; }
+h1.title { font-size: 22pt; letter-spacing: .06em; text-transform: uppercase; color: #0f2e0f; margin: 0; }
+p.subtitle { font-style: italic; color: #4a6a4a; margin: .3rem 0; }
+p.author, p.date { font-size: 9pt; color: #4a6a4a; margin: .1rem 0; }
+h1, h2, h3, h4 { font-family: "Helvetica Neue", Arial, sans-serif; color: #0f2e0f; page-break-after: avoid; }
+h1 { font-size: 16pt; border-bottom: 1px solid #1a5c1a; padding-bottom: .2rem; margin-top: 1.8rem; }
+h2 { font-size: 13pt; color: #1a5c1a; margin-top: 1.4rem; }
+h3 { font-size: 11pt; color: #7a5a00; }
+nav#TOC { border: 1px solid #c9bfa3; background: #ece5d2; padding: .6rem 1rem; margin-bottom: 1.5rem; font-size: 9.5pt; page-break-after: always; }
+nav#TOC ul { padding-left: 1.1rem; margin: .2rem 0; }
+a { color: #1a5c1a; text-decoration: none; }
+table { border-collapse: collapse; width: 100%; font-size: 9pt; margin: .8rem 0; page-break-inside: auto; }
+th, td { border: 1px solid #c9bfa3; padding: .3rem .45rem; vertical-align: top; text-align: left; }
+th { background: #1a5c1a; color: #f4efe2; }
+tr { page-break-inside: avoid; }
+blockquote { border-left: 3px solid #1a5c1a; margin: .8rem 0; padding: .2rem .9rem; color: #2e3a2e; background: #ece5d2; }
+code { font-size: 9pt; background: #ece5d2; padding: 0 .2rem; }
+pre { background: #ece5d2; padding: .6rem; overflow-x: auto; font-size: 8.5pt; white-space: pre-wrap; }
+.warning-box { border: 2px solid #8b1a1a; background: #f6e6e0; padding: .6rem .9rem; margin: 1rem 0; }
+img { max-width: 100%; }
+.callout { border: 1px solid #c9bfa3; border-left: 4px solid #1a5c1a; background: #ece5d2; padding: .5rem .9rem; margin: 1rem 0; page-break-inside: avoid; }
+.callout > p:first-child > strong:only-child { display: block; font-family: "Helvetica Neue", Arial, sans-serif; color: #0f2e0f; text-transform: uppercase; letter-spacing: .04em; font-size: 9.5pt; }
+.callout-important, .callout-warning, .callout-caution { border-left-color: #8b1a1a; background: #f6e6e0; }
+.callout-tip { border-left-color: #7a5a00; }
+@media print { body { margin: 0; max-width: none; } }
+</style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#ecotopia-2026-bitlair-prop-fabrication-master-guide" id="toc-ecotopia-2026-bitlair-prop-fabrication-master-guide">ECOTOPIA
+2026 — BITLAIR PROP FABRICATION MASTER GUIDE</a>
+<ul>
+<li><a href="#workshop-capabilities-machine-workflows-fabrication-plan-amersfoort" id="toc-workshop-capabilities-machine-workflows-fabrication-plan-amersfoort">Workshop
+Capabilities, Machine Workflows &amp; Fabrication Plan
+(Amersfoort)</a></li>
+<li><a href="#machine-inventory-vs.-ecotopia-props-matrix" id="toc-machine-inventory-vs.-ecotopia-props-matrix">1. Machine
+Inventory vs. Ecotopia Props Matrix</a></li>
+<li><a href="#machine-specific-fabrication-workflows" id="toc-machine-specific-fabrication-workflows">2. Machine-Specific
+Fabrication Workflows</a></li>
+<li><a href="#preparation-checklist-before-visiting-bitlair" id="toc-preparation-checklist-before-visiting-bitlair">3. Preparation
+Checklist Before Visiting Bitlair</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="ecotopia-2026-bitlair-prop-fabrication-master-guide">ECOTOPIA
+2026 — BITLAIR PROP FABRICATION MASTER GUIDE</h1>
+<h2 id="workshop-capabilities-machine-workflows-fabrication-plan-amersfoort">Workshop
+Capabilities, Machine Workflows &amp; Fabrication Plan (Amersfoort)</h2>
+<blockquote>
+<p><strong>Hackerspace:</strong> Bitlair (Nijverheidsweg-Noord 77,
+Amersfoort • <a href="https://wiki.bitlair.nl">wiki.bitlair.nl</a>)<br />
+<strong>Target Event:</strong> <em>Ecotopia</em> Immersive Theater Party
+(De Warren, Nov 28, 2026)<br />
+<strong>Goal:</strong> Transform the digital game design, passports,
+stamps, and quest assets into physical, high-immersion props using
+Bitlair’s machines.</p>
+</blockquote>
+<hr />
+<h2 id="machine-inventory-vs.-ecotopia-props-matrix">1. Machine
+Inventory vs. Ecotopia Props Matrix</h2>
+<p>Bitlair’s workshop is uniquely equipped for all aspects of Ecotopia
+physical production. Below is the exact mapping of machines to event
+props:</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Bitlair Machine</th>
+<th>Location</th>
+<th>Specs &amp; Software</th>
+<th>Ecotopia Props to Fabricate</th>
+<th>Cost / Policy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bambu Lab Fleet</strong> (1× X1C + 3× P1S)</td>
+<td>Flexlab</td>
+<td>0.4mm nozzle, PEI plates, AMS multi-material, <strong>Bambu
+Studio</strong></td>
+<td>• 10 Ministry Stamp handles &amp; caps (PLA/PETG)<br>• Flexible TPU
+Stamp Faces (from the SVGs in <code>stamps/</code>)<br>• Speakeasy
+tokens &amp; Credential badge clips</td>
+<td><strong>€ 0,03 / gram</strong> filament</td>
+</tr>
+<tr>
+<td><strong>60W CO2 Lasercutter</strong></td>
+<td>Flexlab</td>
+<td><strong>1260mm × 630mm bed</strong>, Ruida DSP controller,
+<strong>LightBurn</strong></td>
+<td>• 10 Ministry Desk Placards &amp; Clipboard Backers (4mm
+Poplar)<br>• The Grand Central Decree Board (Secret Hitler track)<br>• 5
+Corporate Agenda token markers<br>• Laser-engraved natural rubber stamp
+alternative</td>
+<td><strong>€ 0,10 / min</strong> (members) / € 0,20 / min</td>
+</tr>
+<tr>
+<td><strong>61cm Vinylsnijder</strong></td>
+<td>Flexlab</td>
+<td>61cm roll width, infinite length, <strong>Easy Cut
+Studio</strong></td>
+<td>• Covert Resistance Stickers (<em>“THE STAG IS SILICON”</em> &amp;
+Antlers)<br>• Ministry floor &amp; door signs<br>• Spray-paint stencils
+for canvas banners</td>
+<td><strong>Free machine</strong>;<br>Vinyl <strong>€ 0,75 /
+10cm</strong> (incl. transfer tape)</td>
+</tr>
+<tr>
+<td><strong>Bernina B500 Borduurmachine</strong></td>
+<td>Flexlab</td>
+<td>Digital embroidery, USB input (<code>.exp</code> /
+<code>.dst</code>), multi-hoop</td>
+<td>• 10 Official Ministry Armbands / Sashes<br>• Underground Resistance
+<em>“Root &amp; Branch”</em> sew-on patches</td>
+<td>RevBank donation (“borduurmachine”)</td>
+</tr>
+<tr>
+<td><strong>Shirtpers (Heat Press)</strong></td>
+<td>Flexlab</td>
+<td>High-temp flatbed heat press</td>
+<td>• Ministry of Service aprons<br>• Facilitator &amp; Warden
+high-contrast sashes</td>
+<td><strong>Free</strong></td>
+</tr>
+<tr>
+<td><strong>Fiberlaser</strong></td>
+<td>Flexlab</td>
+<td>Galvo fiber laser (metal marking)</td>
+<td>• Library Speakeasy metal brass keys &amp; VIP tokens</td>
+<td><strong>Free</strong> (Tuig adoption)</td>
+</tr>
+<tr>
+<td><strong>Elektronica Werkplaats</strong></td>
+<td>Hoofdruimte</td>
+<td>Soldeerstation, oscilloscopen, componenten</td>
+<td>• Bike Dynamo voltage display / wattage meter<br>• Cellar AI Server
+node flashing LED status lights<br>• Resistance UV blacklight pens /
+flashlights</td>
+<td>Free / RevBank component costs</td>
+</tr>
+<tr>
+<td><strong>Houtwerkplaats</strong></td>
+<td>Houtwerkplaats</td>
+<td>Tafelzaag, afkortzaag, lintzaag, bovenfrees, schuurmachines</td>
+<td>• Central Decree Board standing easel / frame<br>• Bike Dynamo
+wooden mounting stand<br>• Assembly podium</td>
+<td>Free (bring own wood)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="machine-specific-fabrication-workflows">2. Machine-Specific
+Fabrication Workflows</h2>
+<h3 id="a.-bambu-lab-x1c-p1s-the-3d-printed-stamps">A. Bambu Lab X1C
+&amp; P1S — The 3D-Printed Stamps</h3>
+<ul>
+<li><strong>Files:</strong> All SVG vector files in the
+<code>stamps/</code> folder (see the Downloads page on the site). 3D
+settings are listed in the workflow below.</li>
+<li><strong>Workflow:</strong>
+<ol type="1">
+<li>Open Koolm’s <a href="https://makerworld.com/en/models/1037541-stamp-maker-customizable-stamps#profileId-1021711">MakerWorld
+Stamp Maker (#1037541)</a>.</li>
+<li>Upload the vectorized SVGs:
+<ul>
+<li>10 Ministry Seals: 40mm Ø Round (relief height: 1.8mm).</li>
+<li>3 Labor Shifts: 18mm × 18mm Square.</li>
+<li>VIP Speakeasy: 38mm × 16mm Octagon.</li>
+<li>Humus Liquidated: 34mm × 13mm Stencil.</li>
+<li>Resistance Mark: 18mm Ø Round.</li>
+</ul></li>
+<li>Export handles/caps as STL and stamp faces as STL.</li>
+<li><strong>Printing Handles (PLA):</strong> Load on any of the 4 Bambu
+printers in Flexlab. Slice in Bambu Studio with 15% gyroid infill. Can
+use AMS to print dual-color ministry labels on the handle caps!</li>
+<li><strong>Printing Stamp Faces (TPU 95A):</strong> Mount TPU spool on
+the rear spool holder (do not feed TPU into the AMS). Set outer wall
+speed to 25–35 mm/s and top surface pattern to
+<strong>Concentric</strong>.</li>
+</ol></li>
+</ul>
+<hr />
+<h3 id="b.-60w-co2-lasercutter-desk-placards-central-decree-board">B.
+60W CO2 Lasercutter — Desk Placards &amp; Central Decree Board</h3>
+<ul>
+<li><strong>Work Area:</strong> Massive <strong>1260mm × 630mm</strong>
+bed.</li>
+<li><strong>Software:</strong> <strong>LightBurn</strong> (already
+installed and licensed on the PC right next to the laser).</li>
+<li><strong>Recommended Material:</strong> 3mm or 4mm Poplar Plywood
+(<em>populieren multiplex</em>) — cheap, light, cuts cleanly.</li>
+<li><strong>Jobs to Run:</strong>
+<ol type="1">
+<li><strong>10 Ministry Desk Placards (250mm × 120mm each):</strong>
+<ul>
+<li>Cut wooden stand-up signs for the 10 stations (one per ministry:
+Purity, Radiance, Breath, Flow, Light, Industry, Humus, Service,
+Vigilance, Joy) with slot-in interlocking feet.</li>
+<li><strong>Speed/Power settings:</strong>
+<ul>
+<li>Cutting (4mm poplar): <strong>8 mm/s @ 100% power</strong>.</li>
+<li>Line Scoring (outlines &amp; text): <strong>30 mm/s @ 25%
+power</strong> (vector scoring is 10× faster than raster
+engraving!).</li>
+</ul></li>
+</ul></li>
+<li><strong>The Grand Central Decree Board (800mm × 500mm):</strong>
+<ul>
+<li>Sized to fit the stage. Features the 5 Corporate Agenda tracks (1 to
+5 milestones) with laser-cut slots where acrylic or wooden tokens
+advance each round.</li>
+</ul></li>
+<li><strong>Alternative Laser-Cut Rubber Stamps:</strong>
+<ul>
+<li>The CO2 laser can directly engrave A4 laser stamp rubber sheets at
+500 dpi. If TPU prints are soft, laser-engraved rubber is an ultra-crisp
+5-minute fallback!</li>
+</ul></li>
+</ol></li>
+</ul>
+<hr />
+<h3 id="c.-61cm-vinyl-cutter-signage-resistance-decals">C. 61cm Vinyl
+Cutter — Signage &amp; Resistance Decals</h3>
+<ul>
+<li><strong>Machine:</strong> 61cm wide plotter in Flexlab.</li>
+<li><strong>Software:</strong> <strong>Easy Cut Studio</strong>
+(installed on the Bitlair PC above the machine; accepts
+<code>.svg</code> directly!).</li>
+<li><strong>Cost:</strong> Machine is free; vinyl is € 0,75 per 10
+linear cm (stocked in multiple colors under the bench, pay via RevBank
+<code>VINYL10CM</code>).</li>
+<li><strong>Jobs to Cut:</strong>
+<ol type="1">
+<li><strong>Underground Resistance Stickers:</strong>
+<ul>
+<li>Load <code>stamps/resistance_ankle_stamp.svg</code>.</li>
+<li>Cut 50× 30mm round decals on matte black and purple vinyl.</li>
+<li>Rebels can peel and stick these on bathroom mirrors, corridor posts,
+and citizen dossiers.</li>
+</ul></li>
+<li><strong>R.E.I.G.N. Perimeter Tape / Decals:</strong>
+<ul>
+<li>Cut floor arrows and wall boundary warnings: <em>“R.E.I.G.N.
+PERIMETER — PASSPORT AUDIT REQUIRED BEYOND THIS POINT”</em>.</li>
+</ul></li>
+<li><strong>Spray Paint Stencils:</strong>
+<ul>
+<li>Cut stencil film for spray-painting <em>“THE STAG IS SILICON”</em>
+onto burlap banners.</li>
+</ul></li>
+</ol></li>
+</ul>
+<hr />
+<h3 id="d.-bernina-b500-borduurmachine-ministry-armbands-badges">D.
+Bernina B500 Borduurmachine — Ministry Armbands &amp; Badges</h3>
+<ul>
+<li><strong>Machine:</strong> Bernina B500 embroidery machine (located
+in Flexlab in the large Samla storage box).</li>
+<li><strong>Software:</strong> Ink/Stitch (free Inkscape extension) or
+Bernina ArtLink to export <code>.exp</code> files to a USB thumb
+drive.</li>
+<li><strong>Setup:</strong>
+<ul>
+<li>Standard pre-set settings: Foot #26, upper tension 3, lower tension
+0, Jeans needle.</li>
+<li>Fabric: Thick cotton canvas or felt armbands (one colour per
+ministry).</li>
+</ul></li>
+<li><strong>Production:</strong>
+<ul>
+<li>Embroider the 10 circular ministry crests (using our SVGs) directly
+onto 100mm wide armbands with Velcro backing for the 10
+facilitators.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="e.-electronics-station-interactive-props">E. Electronics Station
+— Interactive Props</h3>
+<ul>
+<li><strong>Bike Dynamo Wattage Monitor (Ministry of Light
+station):</strong>
+<ul>
+<li>Use the soldering bench in the Hoofdruimte.</li>
+<li>Wire an Arduino Nano / ESP32 with an analog voltage divider and a
+large 4-digit 7-segment display or an analog 1970s dial voltmeter.</li>
+<li>When guests pedal the bike dynamo, the meter lights up and prints a
+verification tone when 100 Joules are contributed!</li>
+</ul></li>
+<li><strong>The Cellar AI Server Node (Resistance Climax):</strong>
+<ul>
+<li>An old rack server chassis or enclosure with cycling green/red LEDs,
+a piezo buzzer, and an Ethernet cable run. Operatives must physically
+pull a jumper or insert a key to crash the Agenda engine!</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="preparation-checklist-before-visiting-bitlair">3. Preparation
+Checklist Before Visiting Bitlair</h2>
+<h3 id="what-to-bring">What to Bring:</h3>
+<ul class="task-list">
+<li><label><input type="checkbox"></input><strong>USB Thumb Drive</strong>
+loaded with:</label>
+<ul>
+<li><code>stamps/*.svg</code> (for Bambu Studio, LightBurn &amp; Easy
+Cut Studio vinyl cutter)</li>
+<li>The passport and card-deck print files (A6 booklets are being
+rebuilt; take the latest from the Downloads page)</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>Sheet Materials for Laser
+Cutting:</strong></label>
+<ul>
+<li>2 to 3 sheets of <strong>4mm Poplar Plywood (1200 × 600 mm)</strong>
+— available at Gamma / Hornbach / Praxis.</li>
+<li>Optional: 1 sheet of 3mm tinted green or smoky acrylic for
+tokens/VIP passes.</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>Filament:</strong></label>
+<ul>
+<li>1 spool of <strong>TPU 95A (Black or Grey)</strong> for the stamp
+faces (check Bitlair Discord/wiki if space has TPU or bring your
+own).</li>
+<li>PLA is readily available at Bitlair for € 0,03/g.</li>
+</ul></li>
+<li><label><input type="checkbox"></input><strong>Fabric:</strong></label>
+<ul>
+<li>Canvas / cotton straps for armbands, blank scullery aprons for
+heat-pressing.</li>
+</ul></li>
+</ul>
+<h3 id="bitlair-etiquette-access">Bitlair Etiquette &amp; Access:</h3>
+<ul>
+<li><strong>Open Doors:</strong> Typically <strong>Sunday afternoons
+(from 14:00)</strong> and <strong>Wednesday evenings (from
+19:00)</strong>.</li>
+<li><strong>Instructors:</strong> Ask in the space or on Bitlair
+Discord/IRC for:
+<ul>
+<li><em>Lasercutter:</em> Vuurtorenjeroen / Linor / Hobbybob.</li>
+<li><em>Bambu Lab:</em> Elborro / Vuurtorenjeroen / ChillThijs.</li>
+<li><em>Vinyl Cutter:</em> Hobbybob / Elena.</li>
+<li><em>Borduurmachine:</em> Aranea / Elena.</li>
+</ul></li>
+<li><strong>Payment:</strong> Setup a <strong>RevBank</strong> account
+at the bar terminal (add balance via iDeal/Wero) to pay for lasercutter
+time, vinyl, and snacks/club-mate!</li>
+</ul>
+</body>
+</html>

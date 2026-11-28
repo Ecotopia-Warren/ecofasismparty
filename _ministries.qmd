@@ -1,0 +1,74 @@
+<style>
+.min-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.min-card { background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px; }
+.min-card h4 { margin: 0 0 0.4rem; color: #6dde6d; display: flex; align-items: center; gap: 0.6rem; }
+.min-card img { width: 40px; height: 40px; filter: invert(62%) sepia(55%) saturate(500%) hue-rotate(70deg); }
+.min-card p { font-size: 0.88rem; color: #a0cca0; margin: 0.3rem 0 0; }
+.min-card .duty { color: #c8a000; font-size: 0.8rem; }
+</style>
+
+::: {.min-grid}
+
+::: {.min-card}
+#### ![](stamps/insignia/01_purity.svg) 1. Purity
+<p>What enters the body. Pulse paste, clean plates, honest appetites. <em>"The Ministry of Purity recommends pulse paste."</em></p>
+<p class="duty">Night duty: the ration counter and taste trials.</p>
+:::
+
+::: {.min-card}
+#### ![](stamps/insignia/02_radiance.svg) 2. Radiance
+<p>Daylight, warmth and the glow of a contented face. Rest is a right; Radiance schedules it.</p>
+<p class="duty">Night duty: the rest schedule and the glow check.</p>
+:::
+
+::: {.min-card}
+#### ![](stamps/insignia/03_breath.svg) 3. Breath
+<p>Air: shared, measured, never wasted. Sighing is a form of emission.</p>
+<p class="duty">Night duty: breath, whistle and candle challenges.</p>
+:::
+
+::: {.min-card}
+#### ![](stamps/insignia/04_flow.svg) 4. Flow
+<p>Water and everything that flows: drinks, queues, conversation. Every answer is paid for in water; Flow has done the conversion.</p>
+<p class="duty">Night duty: the bar water-ledger and queue etiquette.</p>
+:::
+
+::: {.min-card}
+#### ![](stamps/insignia/05_light.svg) 5. Light
+<p>Living lightly: footprint, possessions, the gentle weight of a citizen.</p>
+<p class="duty">Night duty: surrender and swap of belongings, the footprint audit.</p>
+:::
+
+::: {.min-card}
+#### ![](stamps/insignia/06_industry.svg) 6. Industry
+<p>The hive. Every citizen's useful labour, joyfully pooled.</p>
+<p class="duty">Night duty: work shifts and the hive production line.</p>
+:::
+
+::: {.min-card}
+#### ![](stamps/insignia/07_humus.svg) 7. Humus
+<p>Soil, decay and return. All things go back to nature, including your records on 19 December.</p>
+<p class="duty">Night duty: compost, sorting and returning spent credits.</p>
+:::
+
+::: {.min-card}
+#### ![](stamps/insignia/08_service.svg) 8. Service
+<p>Order, packaging, logistics: every citizen in their box. Service does the placing, so that you need not.</p>
+<p class="duty">Night duty: the inburgering desk and assignment.</p>
+:::
+
+::: {.min-card}
+#### ![](stamps/insignia/09_vigilance.svg) 9. Vigilance
+<p>Serves the Guardian. Keeps the list; receives every concern. Please keep your evenings free.</p>
+<p class="duty">Night duty: the concern box, observation, the list.</p>
+:::
+
+::: {.min-card}
+#### ![](stamps/insignia/10_joy.svg) 10. Joy
+<p>Mandatory celebration. The mask is always smiling. Dancing counts as renewable energy.</p>
+<p class="duty">Night duty: the dance floor and smile checks.</p>
+:::
+
+:::
+
+<p style="font-size:0.75rem;color:#5a8a5a;">Ministry names and icons are canon (join-ecotopia.org). Mandates and night duties are drafts pending sign-off (issue #4).</p>

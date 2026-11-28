@@ -1,0 +1,52 @@
+---
+title: "The Articles of Nurturing & The Ten Ministries"
+subtitle: "The machinery of care. Every citizen serves in one."
+---
+
+<div class="scanlines"></div>
+
+<div class="ticker-wrap">
+  <span class="ticker">
+    ◆ ADOPTED UNANIMOUSLY ◆ EVERY VOTE WAS COUNTED, INCLUDING YOURS ◆ REST IS A RIGHT. IT IS SCHEDULED ◆ R.E.I.G.N. HEARS EVERY CONCERN ◆
+  </span>
+</div>
+
+<div style="text-align:center; padding: 2rem; border: 2px solid #1a5c1a; background: #0a1a0a; margin-bottom: 2rem;">
+  <div class="seal">🦌</div>
+  <div style="font-family: 'Special Elite', monospace; color: #6dde6d; letter-spacing: 0.2em; font-size: 1.4rem; text-transform: uppercase; margin: 1rem 0;">The Articles of Nurturing</div>
+  <div style="color: #8cb88c; font-size: 0.85rem; font-style: italic; margin-bottom: 1rem;">Adopted unanimously. Every vote was counted, including yours.</div>
+  <div style="color: #a0cca0; font-size: 1rem; line-height: 1.9; max-width: 650px; margin: 0 auto; text-align: left;">
+    <strong>I.</strong> Every citizen is placed where they will flourish. R.E.I.G.N. does the placing, so that you need not.<br>
+    <strong>II.</strong> Questions are welcome. They have already been answered.<br>
+    <strong>III.</strong> Rest is a right of every citizen. It is scheduled.<br>
+    <strong>IV.</strong> R.E.I.G.N. hears every concern. Every single one.
+  </div>
+</div>
+
+---
+
+## The Ten Ministries
+
+Every citizen is assigned **one ministry and one quest**. *You do not have to choose. That kindness has already been arranged.*
+
+{{< include _ministries.qmd >}}
+
+---
+
+## The soft voice (crew guidance)
+
+Ministries never punish. They *help*. When you staff a ministry:
+
+* Speak gently, smile, and assume the citizen agrees with you. They will, eventually.
+* Never threaten. Everything has *already been decided*, for their own good.
+* Praise compliance lavishly. Be a little disappointed by everything else.
+* Every request is heard. Every request is *decided*.
+* Guests can always step out of the game. **"OZONE"** pauses roleplay immediately.
+
+---
+
+<div style="text-align:center; margin: 2rem 0;">
+  <a href="lore.qmd" class="cta-btn">THE WORLD</a>
+  <a href="slogans.qmd" class="cta-btn">SLOGANS & SONGS</a>
+  <a href="attend.qmd" class="cta-btn">CITIZENSHIP INTAKE</a>
+</div>

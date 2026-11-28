@@ -1,0 +1,29 @@
+/* Print + web view for public Ecotopia documents. Light paper, state-green accents. */
+@page { size: A4; background: #f4efe2; margin: 18mm 16mm 20mm; @bottom-center { content: "ECOTOPIA · R.E.I.G.N. · " counter(page); font: 8pt sans-serif; color: #4a6a4a; } }
+html { background: #f4efe2; }
+body { max-width: 46rem; margin: 2rem auto; padding: 0 1rem; font: 10.5pt/1.55 Georgia, "Times New Roman", serif; color: #1c241c; background: #f4efe2; }
+header#title-block-header { border-bottom: 3px double #1a5c1a; margin-bottom: 1.5rem; padding-bottom: .8rem; }
+h1.title { font-size: 22pt; letter-spacing: .06em; text-transform: uppercase; color: #0f2e0f; margin: 0; }
+p.subtitle { font-style: italic; color: #4a6a4a; margin: .3rem 0; }
+p.author, p.date { font-size: 9pt; color: #4a6a4a; margin: .1rem 0; }
+h1, h2, h3, h4 { font-family: "Helvetica Neue", Arial, sans-serif; color: #0f2e0f; page-break-after: avoid; }
+h1 { font-size: 16pt; border-bottom: 1px solid #1a5c1a; padding-bottom: .2rem; margin-top: 1.8rem; }
+h2 { font-size: 13pt; color: #1a5c1a; margin-top: 1.4rem; }
+h3 { font-size: 11pt; color: #7a5a00; }
+nav#TOC { border: 1px solid #c9bfa3; background: #ece5d2; padding: .6rem 1rem; margin-bottom: 1.5rem; font-size: 9.5pt; page-break-after: always; }
+nav#TOC ul { padding-left: 1.1rem; margin: .2rem 0; }
+a { color: #1a5c1a; text-decoration: none; }
+table { border-collapse: collapse; width: 100%; font-size: 9pt; margin: .8rem 0; page-break-inside: auto; }
+th, td { border: 1px solid #c9bfa3; padding: .3rem .45rem; vertical-align: top; text-align: left; }
+th { background: #1a5c1a; color: #f4efe2; }
+tr { page-break-inside: avoid; }
+blockquote { border-left: 3px solid #1a5c1a; margin: .8rem 0; padding: .2rem .9rem; color: #2e3a2e; background: #ece5d2; }
+code { font-size: 9pt; background: #ece5d2; padding: 0 .2rem; }
+pre { background: #ece5d2; padding: .6rem; overflow-x: auto; font-size: 8.5pt; white-space: pre-wrap; }
+.warning-box { border: 2px solid #8b1a1a; background: #f6e6e0; padding: .6rem .9rem; margin: 1rem 0; }
+img { max-width: 100%; }
+.callout { border: 1px solid #c9bfa3; border-left: 4px solid #1a5c1a; background: #ece5d2; padding: .5rem .9rem; margin: 1rem 0; page-break-inside: avoid; }
+.callout > p:first-child > strong:only-child { display: block; font-family: "Helvetica Neue", Arial, sans-serif; color: #0f2e0f; text-transform: uppercase; letter-spacing: .04em; font-size: 9.5pt; }
+.callout-important, .callout-warning, .callout-caution { border-left-color: #8b1a1a; background: #f6e6e0; }
+.callout-tip { border-left-color: #7a5a00; }
+@media print { body { margin: 0; max-width: none; } }
