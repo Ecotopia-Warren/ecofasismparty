@@ -174,9 +174,9 @@ STATIONS = [
                 "Add a signature hand gesture.",
                 "Take the mic and get the crowd enthusiastic about joining. How long: {TBD}"],
          reward=None, cards="None. " + GATE,
-         safety="Speaking is voluntary. The crowd cheers; it never heckles.",
+         safety="Speaking is voluntary. Step down whenever you like.",
          checks=None, stamps=None),
-    dict(n=28, floor="Everywhere", loc="Everywhere",
+    dict(n=28, floor="Everywhere", loc=None,
          ministry=None, kicker="WHO THE POLICE ARE: {TBD:#28b}",
          name="THE CIVIC<br>COURTESY PATROL",
          sub="Police: what to do when an officer stops you.",
@@ -188,7 +188,7 @@ STATIONS = [
          safety="Officers never search, touch or take anything without your yes.",
          checks="Spot checks on cards and stamps. Send cheaters to Interrogation (#34) or Carbon Confessions (#18).",
          stamps="None. Correction stamps are given at #34 / #18."),
-    dict(n=29, floor="Everywhere", loc="Everywhere (the speakers)",
+    dict(n=29, floor="Everywhere", loc="the speakers",
          ministry=None, kicker="R.E.I.G.N. ITSELF",
          name="THE VOICE<br>OF R.E.I.G.N.",
          sub="Intercom announcements: when R.E.I.G.N. speaks, listen.",
@@ -240,7 +240,7 @@ STATIONS = [
          name="THE MINISTRY WILL<br>SEE YOU NOW",
          sub="Inburgering: the gate. Passport, ministry, quest, and stamps for finished cards.",
          steps=["Arrive 20:30-21:00. Applied? Give your name. Not on the list? A few questions first, at Interrogation.",
-                "Take your passport and quest card. Your debt is on page 2. <b>1 stamp = 100 CC</b>.",
+                "Take your passport and quest card. Your debt is on page 2. <b class='nw'>1 stamp = 100 CC</b>.",
                 "After 21:00 the gate is the quest desk: hand in finished cards, get your stamps and your next chain step."],
          reward="Quest cards are stamped here: <b>1, 2 or 3 stamps</b> per card. The top 3 ministries compete at 23:30.",
          cards="<b>All finished cards</b>. Chains (Hacker, Data Centre, Smuggler): the next step is given here.",
@@ -262,19 +262,19 @@ STATIONS = [
 ]
 
 # --------------------------------------------------------------- RENDER
-HDR_H = 17
+HDR_H = 24
 
 
 def header(resist=False):
     w, h = 128, HDR_H
     if resist:
         body = (f'<rect width="{w}" height="{h}" fill="#fff"/>'
-                f'<line x1="4" y1="{h / 2}" x2="{w / 2 - 11}" y2="{h / 2}" stroke="{RED}" stroke-width="0.8"/>'
-                f'<line x1="{w / 2 + 11}" y1="{h / 2}" x2="{w - 4}" y2="{h / 2}" stroke="{RED}" stroke-width="0.8"/>'
-                + mt.inner_svg(mt.RESIST, w / 2 - 8, 0.5, 16))
+                f'<line x1="4" y1="{h / 2}" x2="{w / 2 - 14}" y2="{h / 2}" stroke="{RED}" stroke-width="0.8"/>'
+                f'<line x1="{w / 2 + 14}" y1="{h / 2}" x2="{w - 4}" y2="{h / 2}" stroke="{RED}" stroke-width="0.8"/>'
+                + mt.inner_svg(mt.RESIST, w / 2 - 11.5, 0.5, 23))
     else:
         body = (f'<rect width="{w}" height="{h}" fill="#111"/>' + mt.sunburst(w / 2, h + 4, 110, 40, "#333")
-                + mt.stag(w / 2, 1.2 + 78 * 0.122, 0.122, mt.PAPER, "#111"))
+                + mt.stag(w / 2, 1.5 + 78 * 0.17, 0.17, mt.PAPER, "#111"))
     return mt.svg_doc(w, h, body).replace("<svg ", '<svg class="hdr" ', 1)
 
 
@@ -289,7 +289,7 @@ def kicker(s):
 def sign(s):
     steps = "".join(f"<li><span>{t(x)}</span></li>" if x else f'<li class="blank"><span>{tbd("what you do")}</span></li>'
                     for x in s["steps"])
-    loc = t(s["loc"]) if s["loc"] else tbd("location")
+    loc = t(s["loc"]) if s["loc"] else ("" if s["floor"] == "Everywhere" else tbd("location"))
     crew_checks = t(s["checks"]) if s["checks"] else tbd()
     crew_stamps = t(s["stamps"]) if s["stamps"] else tbd()
     return f"""<div class="pg{' res' if s.get('resist') else ''}"><div class="frame"></div>
@@ -297,12 +297,12 @@ def sign(s):
 <div class="k">{kicker(s)}</div>
 <h1>{s['name']}</h1>
 <div class="sub">{t(s['sub'])}</div>
-<div class="where">{html.escape(s['floor'])} · {loc}</div>
+<div class="where">{html.escape(s['floor'])}{' · ' + loc if loc else ''}</div>
 <div class="sec">WHAT YOU DO HERE</div>
 <ol>{steps}</ol>
 <div class="row">
 <div class="box rew"><h3>REWARD</h3>{t(s['reward']) if s['reward'] else tbd('credits / stamps')}</div>
-<div class="box cards"><h3>CARDS THAT BRING YOU HERE</h3>{t(s['cards'])}</div>
+<div class="box cards"><h3>QUEST CARDS</h3>{t(s['cards'])}</div>
 </div>
 <div class="safe"><h2>SAFETY &amp; CONSENT</h2>{t(s['safety'])} One word stops all play: <b>OZONE</b>.</div>
 <div class="crew"><h3>CREW</h3>
@@ -321,30 +321,31 @@ body{{background:#444;-webkit-print-color-adjust:exact;print-color-adjust:exact;
 .frame{{position:absolute;inset:4.5mm;border:2px solid #111;pointer-events:none}}
 .frame:after{{content:"";position:absolute;inset:1.2mm;border:.6px solid #111}}
 .hdr{{display:block;width:128mm;height:{HDR_H}mm;margin:0 auto 2mm;flex:none}}
-.k{{font-family:'Archivo Black',sans-serif;font-size:7.6pt;letter-spacing:1.6px;text-align:center;color:{RED}}}
-h1{{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:22pt;line-height:.98;text-align:center;margin:1.2mm 0 1.2mm}}
-.sub{{font-size:9.2pt;font-weight:700;font-style:italic;text-align:center;line-height:1.2}}
-.where{{font-size:7.6pt;font-weight:800;text-align:center;letter-spacing:.6px;text-transform:uppercase;margin:1.2mm 0 2mm}}
-.sec{{font-family:'Archivo Black',sans-serif;font-size:8pt;letter-spacing:1.6px;border-top:2px solid #111;padding-top:1.2mm;margin-bottom:1.6mm}}
-ol{{list-style:none;counter-reset:r;display:flex;flex-direction:column;gap:1.9mm}}
-ol li{{counter-increment:r;display:flex;gap:2.3mm;align-items:flex-start;font-size:10pt;font-weight:700;line-height:1.22}}
-ol li:before{{content:counter(r);flex:none;width:6mm;height:6mm;border-radius:50%;background:#111;color:#fff;
- font-family:'Archivo Black',sans-serif;font-size:9pt;display:flex;align-items:center;justify-content:center;margin-top:-.3mm}}
+.k{{font-family:'Archivo Black',sans-serif;font-size:8.4pt;letter-spacing:1.6px;text-align:center;color:{RED}}}
+h1{{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:27pt;line-height:.97;text-align:center;margin:1.2mm 0 1.2mm}}
+.sub{{font-size:10.6pt;font-weight:700;font-style:italic;text-align:center;line-height:1.2}}
+.where{{font-size:8.4pt;font-weight:800;text-align:center;letter-spacing:.6px;text-transform:uppercase;margin:1.2mm 0 2mm}}
+.sec{{font-family:'Archivo Black',sans-serif;font-size:9pt;letter-spacing:1.6px;border-top:2px solid #111;padding-top:1.2mm;margin-bottom:1.6mm}}
+ol{{list-style:none;counter-reset:r;display:flex;flex-direction:column;gap:2.9mm}}
+ol li{{counter-increment:r;display:flex;gap:2.3mm;align-items:flex-start;font-size:12.6pt;font-weight:700;line-height:1.22}}
+ol li:before{{content:counter(r);flex:none;width:7mm;height:7mm;border-radius:50%;background:#111;color:#fff;
+ font-family:'Archivo Black',sans-serif;font-size:10.5pt;display:flex;align-items:center;justify-content:center;margin-top:-.3mm}}
 ol li.blank span{{flex:1;display:block}}
-ol li.blank .tbd{{display:block;height:6mm;line-height:6mm;padding:0 2mm}}
+ol li.blank .tbd{{display:block;height:7.5mm;line-height:7.5mm;padding:0 2mm}}
 .row{{display:grid;grid-template-columns:1fr 1fr;gap:2mm;margin:2.6mm 0 2.2mm}}
-.box{{border:2px solid #111;border-radius:1.5mm;padding:1.3mm 1.8mm;font-size:7.8pt;font-weight:700;line-height:1.25}}
-.box h3{{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:7.4pt;letter-spacing:1.2px;color:{RED};margin-bottom:.6mm}}
-.safe{{margin-top:auto;background:#111;color:#fff;padding:1.8mm 2.6mm;font-size:8pt;font-weight:700;line-height:1.28}}
-.safe h2{{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:8.4pt;letter-spacing:1px;margin-bottom:.4mm}}
+.box{{border:2px solid #111;border-radius:1.5mm;padding:1.6mm 2.2mm;min-height:23mm;font-size:9.2pt;font-weight:700;line-height:1.25}}
+.box h3{{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:8.2pt;letter-spacing:1.2px;color:{RED};margin-bottom:.6mm}}
+.safe{{margin-top:auto;background:#111;color:#fff;padding:2mm 3mm;font-size:9.6pt;font-weight:700;line-height:1.28}}
+.safe h2{{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:9.6pt;letter-spacing:1px;margin-bottom:.5mm}}
 .safe .tbd{{background:#444;color:#ddd}}
-.crew{{border:1px dashed #111;margin-top:2mm;padding:1.2mm 2mm;font-size:6.9pt;font-weight:700;line-height:1.25}}
-.crew h3{{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:6.8pt;letter-spacing:1.4px;margin-bottom:.3mm}}
+.crew{{border:1px dashed #111;margin-top:2mm;padding:1.4mm 2.2mm;font-size:7.6pt;font-weight:700;line-height:1.25}}
+.crew h3{{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:7.6pt;letter-spacing:1.4px;margin-bottom:.3mm}}
 .crew p+p{{margin-top:.4mm}}
 .crew .dim{{color:#555;font-weight:600}}
 .tbd{{display:inline-block;background:#e6e6e6;color:#6a6a6a;font-family:'Archivo',sans-serif;font-weight:700;font-style:normal;
  font-size:.82em;letter-spacing:.4px;padding:0 1.4mm;border-radius:.8mm;min-width:16mm;text-transform:none}}
-.foot{{font-size:6.6pt;font-weight:700;font-style:italic;text-align:center;margin-top:1.4mm}}
+.nw{{white-space:nowrap}}
+.foot{{font-size:7pt;font-weight:700;font-style:italic;text-align:center;margin-top:1.4mm}}
 .res .k{{color:#111}}
 @page{{size:148.5mm 210mm;margin:0}}
 @media print{{body{{background:none}}.pg{{margin:0;page-break-after:always}}}}"""

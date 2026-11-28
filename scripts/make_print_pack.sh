@@ -18,6 +18,8 @@ join 1_STICKER_quest_fronts$SUF.pdf passport_v2/quest_cards$SUF.pdf
 join 1_STICKER_quest_backs$SUF.pdf  passport_v2/quest_cards_backs$SUF.pdf
 # 2. PLAIN PAPER 120 g (laser, B&W): shooting range targets + station sign
 join 2_PLAIN_targets.pdf props/shooting_range/PRINT_ALL_targets.pdf
+# 2b. PLAIN PAPER 120 g: station signs, 2 x A5 per A4 (one cut)
+join 2b_PLAIN_station_signs.pdf props/station_signs/PRINT_ALL_station_signs.pdf
 # 3. CARD 160-200 g (laser): riddle cards
 join 3_CARD_riddles.pdf props/cryptex/riddle_cards.pdf
 # 4. PLAIN PAPER 80 g (laser, B&W): customs crew guide + script cards
