@@ -21,3 +21,4 @@ print_pack/
 # Crew-only riddle answers (public repo: guests could read them)
 props/cryptex/ANSWER_KEY.*
 __pycache__/
+props/camera/stream_url.txt
