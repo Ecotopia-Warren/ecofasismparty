@@ -14,7 +14,7 @@ scripts/make_print_pack.sh 57x88    # quest cards for 57x88 card stock
 | # | File | Paper | Sheets | Then |
 |---|---|---|---|---|
 | 1 | `1_STICKER_quest_fronts*.pdf` + `1_STICKER_quest_backs*.pdf` | A4 sticker sheets | 14 + 14 | cut, stick (slowest step: start first) |
-| 2 | `3_CARD_riddles.pdf` | 160-200 g card (manual feed) | see pack | cut, put one per data centre |
+| 2 | `3_CARD_riddles.pdf` | 160-200 g card (manual feed) | 1 | cut; 12 cards over 7 data centres: DC1-5 two cards each, DC6 one, DC7 the ring-order card |
 | 3 | `2_PLAIN_targets.pdf` | 120 g plain | see pack | A4 into frames as-is; small sizes cut |
 | 4 | `4_PLAIN_customs.pdf` | 80 g plain | see pack | guide double-sided; A5 cards cut in half, laminate/tape |
 
@@ -23,11 +23,19 @@ scripts/make_print_pack.sh 57x88    # quest cards for 57x88 card stock
 - Line the first cut up with the crop marks, not the paper edge (printers shift 1-2 mm).
 
 ## Sticking quest cards (246 stickers)
-- Any back fits any front, so no matching: one person peels fronts, one peels backs, a third sticks. About 10 s per card, ~20 min for 123 cards with 3 people.
-- Stick fronts on the card face, backs on the pattern side. Quest ID at the bottom of both helps sort afterwards.
-- Faster fallback (no poker cards): print fronts on card stock, backs on the reverse page by page (same order), cut. Check the printer's max paper weight first.
+- **Backs belong to one front.** Each back names the issuing ministry, the verb and the quest ID. Keep front sheet N with back sheet N and stick position by position; check the quest ID at the bottom matches.
+- One person peels fronts, one peels backs (same sheet number, same position), a third sticks. About 10 s per card, ~20 min for 123 cards with 3 people.
+- Do **not** print fronts and backs duplex: the backs are not mirrored, so columns 1 and 3 would swap.
+
+## Enough starter cards
+- Customs gives every citizen one starter card (a Personal I-card or a chain step 1): about **150 + walk-ins**.
+- One run holds only 50 I-cards + H1/D1/S1. **Print sheets 1-6 of fronts AND backs two extra times** (+12 sticker sheets each side = +108 cards).
+- That needs ~108 more poker cards than the ~156 you have. No more poker cards? Stick front and back sticker onto each other (or on 160 g card) instead.
 
 ## Before the doors open
-- [ ] Count: 123 quest cards, 12 riddle cards, targets framed, 2 customs script cards at the gate.
-- [ ] Riddle answer key stays with the crew (never on display).
+- [ ] Count: 123 quest cards + 108 extra starter I-cards, 12 riddle cards, targets framed, 2 customs script cards at the gate.
+- [ ] Riddle answer key `5_CREW_answer_key.pdf` (1 sheet, 2 copies) stays with the crew.
+- [ ] Fill in safety lead + medical names and phone numbers by pen on every customs guide and cheat card.
+- [ ] Brief crew on closing time: passport says "Dance until 03:00", CANON says 04:00.
+- [ ] Targets: "DO NOT SHOOT" red prints grey on the mono laser; still readable. Print only the frame sizes you have (pages 2-11 = A4).
 - [ ] Filled passports and ministry lists come from `passport_v2/out/` (local only, not in git).

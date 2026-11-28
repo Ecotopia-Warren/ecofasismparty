@@ -22,6 +22,8 @@ join 2_PLAIN_targets.pdf props/shooting_range/PRINT_ALL_targets.pdf
 join 3_CARD_riddles.pdf props/cryptex/riddle_cards.pdf
 # 4. PLAIN PAPER 80 g (laser, B&W): customs crew guide + script cards
 join 4_PLAIN_customs.pdf customs/CUSTOMS_CREW_GUIDE.pdf customs/CUSTOMS_CHEAT_CARD_2UP.pdf
+# 5. CREW ONLY (plain 80 g): riddle answer key, 2 copies per A4
+join 5_CREW_answer_key.pdf props/cryptex/ANSWER_KEY.pdf
 echo
 echo "Print (mono laser, fastest):  lp -d HL-2150N_series -o media=A4 -o fit-to-page=false print_pack/<file>.pdf"
 echo "Print at 100% / actual size, never 'fit to page', or cards come out the wrong size."

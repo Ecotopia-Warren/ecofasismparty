@@ -263,8 +263,8 @@ if __name__ == "__main__":
     fronts = os.path.join(HERE, f"quest_cards{SUFFIX}.html")
     backs = os.path.join(HERE, f"quest_cards_backs{SUFFIX}.html")
     open(fronts, "w").write(page("Quest cards", sheets))
-    # one back per card, the ten ministries in turn (11-12 each); backs go on the other side of the poker card,
-    # so any back can go with any front
+    # one back per card, same order as the fronts: back sheet N position K belongs to front sheet N position K
+    # (the back names the issuing ministry, the verb and the quest ID, so match by ID when sticking)
     bks = [back(issuer_of(q[0]), q[0], 'T' if q[0] in TOGETHER else 'D' if q[0] in DELIVER else '') for q in quests]  # issuing ministry: quest_ministries.py
     bsheets = [(f"Backs sheet {i // 9 + 1}", "".join(bks[i:i + 9]) + '<div class="card"></div>' * (9 - len(bks[i:i + 9])))
                for i in range(0, len(bks), 9)]

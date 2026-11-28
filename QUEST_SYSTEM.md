@@ -101,7 +101,7 @@ Per issuing ministry: Breath 9, Flow 10, Humus 12, Industry 10, Joy 14, Light 11
 | I11 | Personal quest | Radiance | TOGETHER | 1 | Get 3 citizens to give you a 10-second hug, counted out loud. Body ... |
 | I12 | Personal quest | Radiance | WITNESS | 1 | Compliment 3 different plants out loud, with a big smile, where oth... |
 | I13 | Personal quest | Flow | REPORT | 1 | Ask 5 citizens: "Who decides how many credits you get?" Done when y... |
-| I14 | Personal quest | Breath | TOGETHER | 1 | Write a secret word on a citizen's back with your finger. They get ... |
+| I14 | Personal quest | Breath | TOGETHER | 1 | Ask first, then write a secret word on a citizen's back with your f... |
 | I15 | Personal quest | Flow | TOGETHER | 2 | Make up how Ecotopia began. Tell it to 3 citizens; each adds one se... |
 | I16 | Personal quest | Joy | TOGETHER | 2 | Find a citizen who doubts Ecotopia and gently convince them. Done w... |
 | I17 | Personal quest | Light | TOGETHER | 1 | Find a citizen wearing something more than 10 years old. Hear its s... |
@@ -144,7 +144,7 @@ Per issuing ministry: Breath 9, Flow 10, Humus 12, Industry 10, Joy 14, Light 11
 | M04 | Ministry quest | Service | TOGETHER | 2 | Hold a 2-minute press conference: one minister takes questions from... |
 | M05 | Ministry quest | Vigilance | REPORT | 3 | Hunt for the rebel hideout as a ministry. Done when a Vigilance cit... |
 | M06 | Ministry quest | Flow | WITNESS | 2 | Get the bar team, or any team at work, to sing a song together, smi... |
-| M07 | Ministry quest | Radiance | WITNESS | 2 | Flicker the lights in a room three times. Done when you have cheerf... |
+| M07 | Ministry quest | Radiance | WITNESS | 2 | Flicker the lights in a room three times, slowly, never near stairs... |
 | M08 | Ministry quest | Flow | WITNESS | 3 | Go as a whole ministry to the worst toilet in Ecotopia. Knock twice... |
 | M09 | Ministry quest | Light | WITNESS | 2 | Set up a two-minute swap shop. Done when 5 citizens have swapped ha... |
 | M10 | Ministry quest | Industry | TOGETHER | 2 | Build the tallest tower you can from empty cups in 3 minutes. Done ... |
@@ -172,7 +172,7 @@ Per issuing ministry: Breath 9, Flow 10, Humus 12, Industry 10, Joy 14, Light 11
 | R02 | Rival quest | Vigilance | REPORT | 2 | Catch 2 members of your rival ministry saying something unsustainab... |
 | R03 | Rival quest | Flow | WITNESS | 1 | Get your rival ministry to sing a song, smiling in sync, while they... |
 | R04 | Rival quest | Light | WITNESS | 2 | Borrow one small item from 3 members of your rival ministry "for re... |
-| R05 | Rival quest | Radiance | WITNESS | 1 | Flicker the lights where your rival ministry is gathering. Done whe... |
+| R05 | Rival quest | Radiance | WITNESS | 1 | Flicker the lights where your rival ministry is gathering (slowly, ... |
 | R06 | Rival quest | Breath | WITNESS | 1 | Hand 3 members of your rival ministry a playful fine for a made-up ... |
 | R07 | Rival quest | Service | WITNESS | 2 | Ask a member of your rival ministry to explain their ministry's pol... |
 | R08 | Rival quest | Purity | WITNESS | 1 | Inspect 3 members of your rival ministry for plastic or fake leathe... |
