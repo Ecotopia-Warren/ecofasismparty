@@ -41,26 +41,28 @@ Regenerate: `python3 passport_v2/make_quest_cards.py`, then `cd passport_v2 && p
 **Front**
 - Icon + kind (Personal / Ministry / Rival / Collaboration / Rebel / Chain quest / Secret role) + **issuing ministry**.
 - Chain and role cards: a black bar, e.g. `THE HACKER · STEP 2 OF 4`.
-- The quest. Complex quests get an **extra instruction** (i, small italic).
-- **How the issuing ministry is involved** (TOGETHER / REPORT / WITNESS, below).
+- The quest: starts with what to do, then **"Done when ..."** (how many / how long) and any special proof. Complex quests get an **extra instruction** (i, small italic).
+- **Mode line** in plain words: `DO IT WITH:` / `BRING IT TO:` / `SHOW IT TO:` a citizen of the issuing ministry (TOGETHER / REPORT / WITNESS, below).
+- **How to play** strip: `1 Do it -> 2 get their reg. no. -> 3 hand in at the gate`.
 - Reward: number of stamps (+CC).
 - **SEAL circle, "this quest scores for":** stamped at the gate with the seal of the ministry that scores the quest.
 
 **Back** (sticker on the other side of the poker card)
 - Icon + "A QUEST OF THE MINISTRY OF X" (the issuing ministry), or "RESISTANCE".
-- `Completed by: reg. no. ___`
-- `Witness / Taking part / Received by: reg. no. ___`: must be a citizen of the **issuing ministry**.
+- `Completed by: your reg. no. ___`
+- `DONE WITH / BROUGHT TO / SHOWN TO a X citizen:` + `Write their reg. no. here ___`: must be a citizen of the **issuing ministry**.
 - Registration **numbers only, no names**. Quest ID at the bottom to match back and front when sticking.
 
 ## Three ways to involve the issuing ministry
 
 | Mode | Front says | Back says | Example |
 |---|---|---|---|
-| **TOGETHER** | at least one citizen of the issuing ministry takes part | Taking part: reg. no. | slow dance with a Breath citizen; "another ministry" in a quest = the issuing ministry |
-| **REPORT** | bring what (or who) you found to a citizen of the issuing ministry | Received by: reg. no. | bring a rebel or hacker to Vigilance; a data centre label to Humus |
-| **WITNESS** | a citizen of the issuing ministry watches you do it | Witness: reg. no. | ask an official the same question three times (Service watches) |
+| **TOGETHER** | DO IT WITH: a X citizen (ministry / collaboration quests: the Ministry of X) | DONE WITH a X citizen: their reg. no. | slow dance with a Breath citizen; "another ministry" in a quest = the issuing ministry |
+| **REPORT** | BRING IT TO: a X citizen | BROUGHT TO a X citizen: their reg. no. | bring a rebel or hacker to Vigilance; a data centre label to Humus |
+| **WITNESS** | SHOW IT TO: a X citizen (they watch you do it) | SHOWN TO a X citizen: their reg. no. | ask an official the same question three times (Service watches) |
 
 Data: `passport_v2/quest_ministries.py`: `ISSUER` (chosen by mandate), modes in `TOGETHER` and `DELIVER`, extra instructions in `NOTES`.
+Card texts: `passport_v2/quest_texts.py` (`TEXT`) overrides the xlsx "quests to print" column; chain and role texts live in `chains.py`. Change log: `passport_v2/QUEST_CARD_CHANGES.md`.
 Rebel quests (RB) are issued by the **Resistance**; the witness is a fellow rebel.
 
 ## Flow on the night

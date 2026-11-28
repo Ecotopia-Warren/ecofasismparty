@@ -57,27 +57,17 @@ DELIVER = {
 }
 assert not TOGETHER & DELIVER
 
+# (I20, I22, I30 and C01-C08 notes were folded into quest_texts.py / the mode line on 2026-11-28.)
 # Extra instructions for the more complex quests: printed small on the front, under the quest text.
 NOTES = {
     "I03": "There are 7 data centres in the house: small boxes with a R.E.I.G.N. label.",
     "I31": "There are 7 data centres in the house: small boxes with a R.E.I.G.N. label.",
-    "I20": "Tell the Ministry of Humus where it is, without moving it.",
     "I39": "The recycling plant is a station. Lost? Ask any official.",
     "M28": "The recycling plant is a station. Lost? Ask any official.",
     "I48": "Found it? Do not go in. Bring a citizen of Vigilance and they fetch the police.",
     "M05": "Found it? Do not go in. Bring a citizen of Vigilance and they fetch the police.",
     "I05": "Rebels are citizens too: they may deny it. Your Vigilance contact decides.",
-    "I22": "Never give names. Ribbon colour only.",
     "M25": "They may say no. Then thank them anyway and let them go.",
     "I10": "The toilet host always has the final say. Let anyone in a hurry pass.",
     "I37": "The toilet host always has the final say. Let anyone in a hurry pass.",
-    "I30": "The host = the official at the gate who stamps your card.",
-    "C01": "Your collaborator ministry is the ministry on this card.",
-    "C02": "Your collaborator ministry is the ministry on this card.",
-    "C03": "Your collaborator ministry is the ministry on this card.",
-    "C04": "Your collaborator ministry is the ministry on this card.",
-    "C05": "Your collaborator ministry is the ministry on this card.",
-    "C06": "Your collaborator ministry is the ministry on this card.",
-    "C07": "Your collaborator ministry is the ministry on this card.",
-    "C08": "Your collaborator ministry is the ministry on this card.",
 }

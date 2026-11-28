@@ -17,3 +17,11 @@ passport_v2/out/passports.pdf
 passport_v2/out/passports_0*.pdf
 passport_v2/out/passports_test_*.pdf
 passport_v2/out/ministry_lists.*
+passport_v2/out/name_index.*
+
+# Generated print bundles
+print_pack/
+
+# Crew-only riddle answers (public repo: guests could read them)
+props/cryptex/ANSWER_KEY.*
+__pycache__/

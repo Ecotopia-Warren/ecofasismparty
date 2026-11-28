@@ -22,26 +22,26 @@ CHAINS = [
     # id, chain, step, of, issuer, mode, text, stamps
     ("H1", "THE HACKER", 1, 4, "VIGILANCE", "D",
      "A hacker hides among us. Ask citizens \"Are you the hacker?\" until one confesses. "
-     "Bring them to the Ministry of Vigilance.", "2"),
+     "Done when you bring them to a Vigilance citizen.", "2"),
     ("H2", "THE HACKER", 2, 4, "SERVICE", "T",
-     "Escort the captured hacker to the Interrogation station. Ask three questions about the stolen file.", "2"),
+     "Escort the captured hacker to the Interrogation station. Ask THREE questions about the stolen file. Done after the third answer.", "2"),
     ("H3", "THE HACKER", 3, 4, "RADIANCE", "D",
-     "Bring the hacker to Carbon Confessions to be corrected. Make sure they confess loudly, with a smile.", "2"),
+     "Bring the hacker to Carbon Confessions to be corrected. Done when they have confessed loudly, with a smile, to a Radiance citizen.", "2"),
     ("H4", "THE HACKER", 4, 4, "HUMUS", "W",
-     "Walk the corrected hacker to the recycling plant and witness their renewal.", "3"),
+     "Walk the corrected hacker to the recycling plant. Done when they have been renewed, with your witness watching.", "3"),
     ("D1", "THE DATA CENTRE", 1, 3, "HUMUS", "D",
-     "Find a R.E.I.G.N. data centre. Memorise its message word for word and recite it to the Ministry of Humus.", "2"),
+     "Find a R.E.I.G.N. data centre and memorise its message. Done when you recite it word for word to a Humus citizen.", "2"),
     ("D2", "THE DATA CENTRE", 2, 3, "VIGILANCE", "T",
-     "Decode the data centre message together with a citizen of Vigilance. Agree on what R.E.I.G.N. is hiding.", "2"),
+     "Decode the data centre message together with a Vigilance citizen. Done when you agree on what R.E.I.G.N. is hiding.", "2"),
     ("D3", "THE DATA CENTRE", 3, 3, "SERVICE", "D",
-     "Turn the decoded message into a cheerful official announcement. Deliver it to the Ministry of Service.", "3"),
+     "Turn the decoded message into a cheerful official announcement. Done when you deliver it to a Service citizen.", "3"),
     ("S1", "THE SMUGGLER", 1, 3, "LIGHT", "D",
      "A smuggler carries a forbidden item. Inspect citizens, with a yes, until you find it. "
-     "Bring the item and its owner to the Ministry of Light.", "2"),
+     "Done when you bring the item and its owner to a Light citizen.", "2"),
     ("S2", "THE SMUGGLER", 2, 3, "HUMUS", "T",
-     "Take the confiscated item and its owner to the recycling plant. Have the item processed, with ceremony.", "2"),
+     "Take the confiscated item and its owner to the recycling plant. Done when the item is processed, with ceremony.", "2"),
     ("S3", "THE SMUGGLER", 3, 3, "JOY", "W",
-     "Return the processed item to the smuggler with a celebration loud enough that 5 citizens join in.", "2"),
+     "Return the processed item to the smuggler with a celebration. Done when 5 citizens join in.", "2"),
 ]
 
 NOTES = {
