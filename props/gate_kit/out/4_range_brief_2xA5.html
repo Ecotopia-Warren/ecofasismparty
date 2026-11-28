@@ -1,0 +1,98 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Range operator brief</title><style>@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,500;0,700;0,800;1,700&display=swap');@page { size: 297mm 210mm; margin: 0 }
+* { box-sizing: border-box; margin: 0; padding: 0 }
+body { font-family: 'Archivo', 'DejaVu Sans', sans-serif; color: #111111; background: #fff;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact }
+.pg { position: relative; overflow: hidden; page-break-after: always; background: #fff }
+.blk { font-family: 'Archivo Black', sans-serif; font-weight: 400 }
+.red { color: #c8102e }
+.kick { font-family: 'Archivo Black', sans-serif; letter-spacing: 2px; color: #c8102e }
+.crew { display: inline-block; border: .5mm solid #111111; padding: .3mm 1.5mm; font-weight: 800; letter-spacing: 1px }
+
+.pg { width: 297mm; height: 210mm; display: flex }
+.a5 { width: 148.5mm; height: 210mm; padding: 7mm 8mm; overflow: hidden; display: flex; flex-direction: column }
+.a5 + .a5 { border-left: .3mm dashed #999 }
+.hd { text-align: center; border-bottom: .8mm solid #111; padding-bottom: 1.5mm; margin-bottom: 1mm }
+.hd .kick { font-size: 7.5pt }
+.hd h1 { font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 18pt; line-height: 1; margin: .8mm 0 }
+.hd .sub { font-size: 7.5pt; font-weight: 700; font-style: italic }
+h2 { font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 10pt; letter-spacing: .5px; margin: 2.6mm 0 .9mm }
+ul, ol { margin-left: 4mm; font-size: 8.9pt; font-weight: 500; line-height: 1.24 }
+li { margin-bottom: .5mm }
+li b, .p b { font-weight: 800 }
+.sc { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.2mm; text-align: center; margin: .6mm 0 1mm }
+.sc div { border: .5mm solid #111; border-radius: 1mm; padding: .5mm; font-size: 6.5pt; font-weight: 800; line-height: 1.05 }
+.sc div b { display: block; font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 12pt }
+.sc .bad { background: #c8102e; border-color: #c8102e; color: #fff }
+.p { font-size: 8.6pt; line-height: 1.24 }
+table.ex { width: 100%; border-collapse: collapse; font-size: 8.4pt; margin: .8mm 0 1.4mm }
+table.ex td { border-bottom: .25mm solid #111; padding: .4mm .8mm }
+table.ex td:nth-child(2) { white-space: nowrap; text-align: right }
+table.ex td:nth-child(3) { white-space: nowrap; text-align: right }
+.safe { margin-top: auto; background: #111; color: #fff; padding: 1.8mm 2.6mm 2.2mm; font-size: 8.3pt; font-weight: 700; line-height: 1.25 }
+.safe h2 { color: #fff; margin: 0 0 .6mm; font-size: 8.5pt }
+.safe b { color: #fff; font-weight: 800 }
+</style></head><body><div class="pg"><div class="a5">
+<div class="hd"><span class="kick">CREW ONLY &middot; STATION #20</span><h1>SHOOTING RANGE<br>OPERATOR BRIEF</h1>
+<div class="sub">The Gallery of Gentle Correction &middot; location: TBD &middot; operator: Chris</div></div>
+<h2>1 &middot; SET UP (before 20:30)</h2>
+<ul>
+<li><b>Glass out of every frame.</b> Box the glass and put it away, far from the range. No glass in the room.</li>
+<li><b>Frames fixed to the wall</b> (screws, hooks or strong tape), at eye height. A frame must not fall when hit. Targets: 8 enemies, the Guardian and a Governor in between them.</li>
+<li><b>Tape the firing line at 3 m</b> from the wall. Nobody walks between the line and the wall: put the queue behind the line, the passage elsewhere.</li>
+<li>Kit: foam darts only (count them, 5 per citizen), credit stamp + ink, pen, the station sign at the line.</li>
+</ul>
+<h2>2 &middot; ONE ROUND</h2>
+<ol>
+<li>One citizen at the line. Check the line is clear. Hand over <b>5 darts</b>.</li>
+<li>Say &ldquo;<b>Line is yours.</b>&rdquo; They shoot all 5. Everyone else waits behind the line.</li>
+<li>Last dart gone: call &ldquo;<b>HOLD</b>&rdquo;. Nobody shoots. You alone fetch the darts and count the hits as you pull them.</li>
+<li>Back behind the line, all darts in hand: call &ldquo;<b>CLEAR</b>&rdquo;. Only now may the next citizen step up.</li>
+<li>Stamp the passport (p.&nbsp;6&ndash;7 credit boxes). One round, then they rejoin the queue.</li>
+</ol>
+<h2>3 &middot; SCORING (same as the sign)</h2>
+<div class="sc"><div><b>100</b>bull</div><div><b>50</b>ring</div><div><b>25</b>portrait</div>
+<div class="bad"><b>&minus;100</b>Governor</div><div class="bad"><b>&minus;200</b>Guardian</div></div>
+<p class="p">Frame or wall: 0. A dart counts where it hangs or first hit; your call is final. Round total below 0 counts as 0:
+a bad round never takes credits away. <b>Stamps = round total &divide; 100, rounded down, max 3.</b></p>
+<table class="ex"><tr><td>100 + 50 + 25 + 25 + miss</td><td>= 200</td><td><b>2 stamps</b></td></tr>
+<tr><td>100 + 100 + 50 &minus; 100 (Governor) + miss</td><td>= 150</td><td><b>1 stamp</b></td></tr>
+<tr><td>25 &minus; 200 (Guardian) + 3 misses</td><td>= -175 &rarr; 0</td><td><b>0 stamps</b></td></tr></table>
+<div class="safe"><h2>4 &middot; SAFETY STOPS: call &ldquo;HOLD&rdquo; at once if</h2>
+anyone steps past the line or between line and wall &middot; a dart is aimed at a person, face or animal &middot;
+a frame comes loose or glass shows up &middot; a dart is hard, bent or modified (take it out) &middot;
+a citizen is very drunk, aggressive or upset (go out of character, call Safety).
+<b>OZONE</b> from anyone: all play around that person stops, drop character: &ldquo;Are you OK?&rdquo;
+Taking part is voluntary. Range closes for the Grand Assembly (TBD: 23:15 or 23:30).</div>
+</div><div class="a5">
+<div class="hd"><span class="kick">CREW ONLY &middot; STATION #20</span><h1>SHOOTING RANGE<br>OPERATOR BRIEF</h1>
+<div class="sub">The Gallery of Gentle Correction &middot; location: TBD &middot; operator: Chris</div></div>
+<h2>1 &middot; SET UP (before 20:30)</h2>
+<ul>
+<li><b>Glass out of every frame.</b> Box the glass and put it away, far from the range. No glass in the room.</li>
+<li><b>Frames fixed to the wall</b> (screws, hooks or strong tape), at eye height. A frame must not fall when hit. Targets: 8 enemies, the Guardian and a Governor in between them.</li>
+<li><b>Tape the firing line at 3 m</b> from the wall. Nobody walks between the line and the wall: put the queue behind the line, the passage elsewhere.</li>
+<li>Kit: foam darts only (count them, 5 per citizen), credit stamp + ink, pen, the station sign at the line.</li>
+</ul>
+<h2>2 &middot; ONE ROUND</h2>
+<ol>
+<li>One citizen at the line. Check the line is clear. Hand over <b>5 darts</b>.</li>
+<li>Say &ldquo;<b>Line is yours.</b>&rdquo; They shoot all 5. Everyone else waits behind the line.</li>
+<li>Last dart gone: call &ldquo;<b>HOLD</b>&rdquo;. Nobody shoots. You alone fetch the darts and count the hits as you pull them.</li>
+<li>Back behind the line, all darts in hand: call &ldquo;<b>CLEAR</b>&rdquo;. Only now may the next citizen step up.</li>
+<li>Stamp the passport (p.&nbsp;6&ndash;7 credit boxes). One round, then they rejoin the queue.</li>
+</ol>
+<h2>3 &middot; SCORING (same as the sign)</h2>
+<div class="sc"><div><b>100</b>bull</div><div><b>50</b>ring</div><div><b>25</b>portrait</div>
+<div class="bad"><b>&minus;100</b>Governor</div><div class="bad"><b>&minus;200</b>Guardian</div></div>
+<p class="p">Frame or wall: 0. A dart counts where it hangs or first hit; your call is final. Round total below 0 counts as 0:
+a bad round never takes credits away. <b>Stamps = round total &divide; 100, rounded down, max 3.</b></p>
+<table class="ex"><tr><td>100 + 50 + 25 + 25 + miss</td><td>= 200</td><td><b>2 stamps</b></td></tr>
+<tr><td>100 + 100 + 50 &minus; 100 (Governor) + miss</td><td>= 150</td><td><b>1 stamp</b></td></tr>
+<tr><td>25 &minus; 200 (Guardian) + 3 misses</td><td>= -175 &rarr; 0</td><td><b>0 stamps</b></td></tr></table>
+<div class="safe"><h2>4 &middot; SAFETY STOPS: call &ldquo;HOLD&rdquo; at once if</h2>
+anyone steps past the line or between line and wall &middot; a dart is aimed at a person, face or animal &middot;
+a frame comes loose or glass shows up &middot; a dart is hard, bent or modified (take it out) &middot;
+a citizen is very drunk, aggressive or upset (go out of character, call Safety).
+<b>OZONE</b> from anyone: all play around that person stops, drop character: &ldquo;Are you OK?&rdquo;
+Taking part is voluntary. Range closes for the Grand Assembly (TBD: 23:15 or 23:30).</div>
+</div></div></body></html>

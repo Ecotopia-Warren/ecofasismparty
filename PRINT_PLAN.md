@@ -16,6 +16,7 @@ scripts/make_print_pack.sh 57x88    # quest cards for 57x88 card stock
 | 1 | `1_STICKER_quest_fronts*.pdf` + `1_STICKER_quest_backs*.pdf` | A4 sticker sheets | 14 + 14 | cut, stick (slowest step: start first) |
 | 2 | `3_CARD_riddles.pdf` | 160-200 g card (manual feed) | 1 | cut; 12 cards over 7 data centres: DC1-5 two cards each, DC6 one, DC7 the ring-order card |
 | 3 | `2_PLAIN_targets.pdf` | 120 g plain | see pack | A4 into frames as-is; small sizes cut |
+| 3b | `2c_PLAIN_gate_kit.pdf` | 120 g plain | 13 | scoreboard 2 sheets on the wall; tray + data centre labels cut on crop marks; range brief + run of show to crew |
 | 4 | `4_PLAIN_customs.pdf` | 80 g plain | see pack | guide double-sided; A5 cards cut in half, laminate/tape |
 
 ## Cutting fast

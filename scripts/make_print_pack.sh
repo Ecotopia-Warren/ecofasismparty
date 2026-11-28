@@ -20,6 +20,8 @@ join 1_STICKER_quest_backs$SUF.pdf  passport_v2/quest_cards_backs$SUF.pdf
 join 2_PLAIN_targets.pdf props/shooting_range/PRINT_ALL_targets.pdf
 # 2b. PLAIN PAPER 120 g: station signs, 2 x A5 per A4 (one cut)
 join 2b_PLAIN_station_signs.pdf props/station_signs/PRINT_ALL_station_signs.pdf
+# 2c. PLAIN PAPER 120 g: gate kit (scoreboard, tallies, tray labels, data centre labels, range brief, run of show)
+join 2c_PLAIN_gate_kit.pdf props/gate_kit/PRINT_ALL_gate_kit.pdf
 # 3. CARD 160-200 g (laser): riddle cards
 join 3_CARD_riddles.pdf props/cryptex/riddle_cards.pdf
 # 4. PLAIN PAPER 80 g (laser, B&W): customs crew guide + script cards
